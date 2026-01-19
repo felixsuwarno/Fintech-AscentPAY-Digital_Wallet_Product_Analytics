@@ -9,14 +9,18 @@ The dataset includes tens of thousands of users, hundreds of thousands of transa
 
 The analysis evaluates user activation, retention, reactivation, customer value (LTV), unit economics, and revenue concentration using defensible, business-aligned metrics to assess overall product health and sustainability.
 
-<br><br>
+<br>
 
 ➤ Project Goal / Purpose:  
 Evaluate whether AscentPAY’s revenue is driven by broad healthy usage or a small set of high-value users, and quantify sustainability via activation, retention, LTV, and CAC payback.
 
+<br>
+
 ➤ Skills Demonstrated:  
 Activation & engagement analytics, retention and reactivation analysis, cohort LTV modeling, monetization and revenue stack analysis, CAC efficiency and payback analysis, revenue concentration and Pareto analysis.
 (SQL • Python • Pandas • fintech KPI design • executive storytelling )
+
+<br>
 
 ➤ Core Business Questions:
 - How long does it take users to complete their first revenue-generating transaction after signup?
@@ -25,16 +29,23 @@ Activation & engagement analytics, retention and reactivation analysis, cohort L
 - Who actually generates revenue, and how concentrated is that value?
 - Do users generate enough lifetime value to justify their acquisition cost?
 
+<br>
+
 ➤ Key Findings:
 ( FOR LATER )
 
+<br>
+
 ➤ Core Issue Identified:
 ( FOR LATER )
+
+<br>
 
 ➤ Executive Outcome:  
 ( FOR LATER )
 
 <br><br>
+
 ➤ The Main Report : 
 ---
 
