@@ -83,7 +83,7 @@ All reporting and conclusions in this project are intentionally scoped to **cale
 
 # Key Questions Answered
 
-##1 - Activation & Engagement**
+##1 - Activation & Engagement
 
 <br>
 
