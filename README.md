@@ -81,22 +81,22 @@ All reporting and conclusions in this project are intentionally scoped to **cale
 
 ---
 
-## Key Questions Answered
+# Key Questions Answered
 
-**1 - Activation & Engagement**
+##1 - Activation & Engagement**
 
 <br>
 
-** 1.1 - User Activation Speed
+**1.1 - User Activation Speed**
 How long does it take users to complete their first transaction after signup, and does activation speed differ by acquisition channel?
 
-Method
+**Method**
 - Identify each user’s first transaction timestamp after signup
 - Calculate the number of days from signup to first transaction
 - Average activation time by acquisition channel
 - Restrict analysis to 2024 signup cohort
 
-Key Insights
+**Key Insights**
 - Users acquired through employer partnerships activate the fastest, reaching their first transaction in under two weeks on average.
 - Referral users activate relatively quickly, suggesting trust and intent accelerate early usage.
 - Organic users take meaningfully longer to activate, indicating weaker initial intent or higher onboarding friction.
@@ -105,16 +105,16 @@ Key Insights
 
 <br>
 
-** 1.2 - Product Engagement (Monthly Stickiness)
+**1.2 - Product Engagement (Monthly Stickiness)**
 Once users are active, how consistently do they return and use the product over time?
 
-Method
+**Method**
 - Define product activity as any transaction or in-app event
 - Compute monthly DAU and MAU for 2024
 - Calculate monthly stickiness as Avg DAU / MAU
 - Track stickiness trends across the calendar year
 
-Key Insights
+**Key Insights**
 - Product stickiness starts low early in the year, then rises quickly as the user base stabilizes.
 - After the initial ramp-up, stickiness remains relatively flat throughout most of the year.
 - The stable but modest stickiness level suggests habit formation without increasing usage intensity.
@@ -123,25 +123,25 @@ Key Insights
 <br><br>
 
 
-**2 - Retention, Churn & Reactivation**
-- What are the month-over-month retention and churn rates for revenue-active users?  
-- How often do lapsed users return and transact again?  
+##2 - Retention, Churn & Reactivation**
+**2.1 - What are the month-over-month retention and churn rates for revenue-active users?  **
+**2.2 - How often do lapsed users return and transact again?  **
 
-**3 - Customer Value (LTV)**
-- How does 180-day LTV vary by signup cohort?  
-- Which acquisition channels generate the strongest early LTV?  
+##3 - Customer Value (LTV)**
+**- How does 180-day LTV vary by signup cohort?  **
+**- Which acquisition channels generate the strongest early LTV?  **
 
-**4 - Monetization Mechanics**
-- What is the overall revenue stack (GMV, net revenue, take rate)?  
-- How does the revenue stack differ by acquisition channel?  
+##4 - Monetization Mechanics**
+**- What is the overall revenue stack (GMV, net revenue, take rate)?  **
+**- How does the revenue stack differ by acquisition channel?  **
 
-**5 - Acquisition Efficiency**
-- Does LTV justify CAC by acquisition channel?  
-- How long does it take to recover CAC (payback period)?  
+##5 - Acquisition Efficiency**
+**- Does LTV justify CAC by acquisition channel?  **
+**- How long does it take to recover CAC (payback period)?  **
 
-**6 - Revenue Concentration & Risk**
-- Are results skewed by extreme users (IQR-based revenue outliers)?  
-- How concentrated is revenue across users (Pareto curve analysis)?  
+##6 - Revenue Concentration & Risk**
+**- Are results skewed by extreme users (IQR-based revenue outliers)?  **
+**- How concentrated is revenue across users (Pareto curve analysis)?  **
 
 
 
