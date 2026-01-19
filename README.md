@@ -130,7 +130,7 @@ Once users are active, how consistently do they return and use the product over 
 **2.2 - How often do lapsed users return and transact again?  **
 
 ## 3 - Customer Value (LTV)**
-**- How does 180-day LTV vary by signup cohort?  
+**- How does 180-day LTV vary by signup cohort?  **
 **- Which acquisition channels generate the strongest early LTV?  **
 
 ## 4 - Monetization Mechanics**
