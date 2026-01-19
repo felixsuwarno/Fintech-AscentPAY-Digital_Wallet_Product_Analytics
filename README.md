@@ -83,7 +83,7 @@ All reporting and conclusions in this project are intentionally scoped to **cale
 
 # Key Questions Answered
 
-##1 - Activation & Engagement
+## 1 - Activation & Engagement
 
 <br>
 
@@ -123,23 +123,23 @@ Once users are active, how consistently do they return and use the product over 
 <br><br>
 
 
-##2 - Retention, Churn & Reactivation
+## 2 - Retention, Churn & Reactivation
 **2.1 - What are the month-over-month retention and churn rates for revenue-active users?  **
 **2.2 - How often do lapsed users return and transact again?  **
 
-##3 - Customer Value (LTV)**
+## 3 - Customer Value (LTV)**
 **- How does 180-day LTV vary by signup cohort?  
 **- Which acquisition channels generate the strongest early LTV?  **
 
-##4 - Monetization Mechanics**
+## 4 - Monetization Mechanics**
 **- What is the overall revenue stack (GMV, net revenue, take rate)?  **
 **- How does the revenue stack differ by acquisition channel?  **
 
-##5 - Acquisition Efficiency
+## 5 - Acquisition Efficiency
 **- Does LTV justify CAC by acquisition channel?  **
 **- How long does it take to recover CAC (payback period)?  **
 
-##6 - Revenue Concentration & Risk
+## 6 - Revenue Concentration & Risk
 **- Are results skewed by extreme users (IQR-based revenue outliers)?  **
 **- How concentrated is revenue across users (Pareto curve analysis)?  **
 
