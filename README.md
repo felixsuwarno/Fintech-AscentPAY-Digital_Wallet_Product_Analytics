@@ -46,7 +46,7 @@ Activation & engagement analytics, retention and reactivation analysis, cohort L
 
 <br><br>
 
-➤ The Main Report : 
+# ➤ The Main Report : 
 ---
 
 <br>
@@ -79,7 +79,9 @@ The analysis uses four core tables representing a digital wallet product:
 The raw dataset spans **2024 through mid-2026**.  
 All reporting and conclusions in this project are intentionally scoped to **calendar year 2024** for consistency.
 
+<br>
 ---
+<br>
 
 # Key Questions Answered
 
