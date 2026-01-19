@@ -92,6 +92,10 @@ All reporting and conclusions in this project are intentionally scoped to **cale
 **1.1 - User Activation Speed**
 How long does it take users to complete their first transaction after signup, and does activation speed differ by acquisition channel?
 
+<p align="center">
+  <img src="images/01_1_Average_User_Activation_Time_Interval.png" width="85%">
+</p>
+
 **Method**
 - Identify each user’s first transaction timestamp after signup
 - Calculate the number of days from signup to first transaction
