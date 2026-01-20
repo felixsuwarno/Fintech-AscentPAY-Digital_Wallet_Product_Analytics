@@ -147,6 +147,8 @@ Once users are active, how consistently do they return and use the product over 
   <img src="images/02_2_MOM_reactivation_rate.png" width="85%">
 </p>
 
+<br><br>
+
 ## 3 - Customer Value (LTV)**
 
 **3.1- How does 180-day LTV vary by signup cohort?**
@@ -155,28 +157,57 @@ Once users are active, how consistently do they return and use the product over 
   <img src="images/03_1_cohort_ltv_180d.png" width="85%">
 </p>
 
-
 **3.2- Which acquisition channels generate the strongest early LTV?**
 
 <p align="center">
   <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
 </p>
 
+<br><br>
+
 ## 4 - Monetization Mechanics**
 
 **4.1- What is the overall revenue stack (GMV, net revenue, take rate)?**
 
+<p align="center">
+  <img src="images/04_1_ revenue_stack_total.png" width="85%">
+</p>
+
 **4.2- How does the revenue stack differ by acquisition channel?**
+
+<p align="center">
+  <img src="images/04_2b_ revenue_stack_per_channel_1.png" width="85%">
+</p>
+
+<p align="center">
+  <img src="images/04_2b_ revenue_stack_per_channel_2.png" width="85%">
+</p>
+
+<br><br>
 
 ## 5 - Acquisition Efficiency
 
 **5.1 - Does LTV justify CAC by acquisition channel?**
 
+<p align="center">
+  <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
+</p>
+
 **5.2 - How long does it take to recover CAC (payback period)?**
+
+<p align="center">
+  <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
+</p>
+
+<br><br>
 
 ## 6 - Revenue Concentration & Risk
 
 **6.1 - Are results skewed by extreme users (IQR-based revenue outliers)?**
+
+<p align="center">
+  <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
+</p>
 
 **- How concentrated is revenue across users (Pareto curve analysis)?**
 
