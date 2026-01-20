@@ -89,7 +89,7 @@ All reporting and conclusions in this project are intentionally scoped to **cale
 
 <br>
 
-**1.1 - User Activation Speed**
+**1.1 - User Activation Speed** <br>
 How long does it take users to complete their first transaction after signup, and does activation speed differ by acquisition channel?
 
 <p align="center">
@@ -111,7 +111,7 @@ How long does it take users to complete their first transaction after signup, an
 
 <br>
 
-**1.2 - Product Engagement (Monthly Stickiness)**
+**1.2 - Product Engagement (Monthly Stickiness)** <br>
 Once users are active, how consistently do they return and use the product over time?
 
 **Method**
