@@ -156,6 +156,7 @@ What are the month-over-month retention and churn rates for revenue-active users
 - The pattern suggests initial product adoption is strong, but sustained month-over-month value is not being delivered to a large portion of users.
 - Revenue stability increasingly depends on a shrinking base of repeat users rather than broad ongoing engagement.
 
+<br>
 
 **2.2 - Reactivation of Lapsed Users** <br>
 When Users stop transacting, how often do they return and generate revenue again?
@@ -189,6 +190,8 @@ When Users stop transacting, how often do they return and generate revenue again
   <img src="images/03_1_cohort_ltv_180d.png" width="85%">
 </p>
 
+<br>
+
 **3.2- Which acquisition channels generate the strongest early LTV?**
 
 <p align="center">
@@ -204,6 +207,8 @@ When Users stop transacting, how often do they return and generate revenue again
 <p align="center">
   <img src="images/04_1_ revenue_stack_total.png" width="85%">
 </p>
+
+<br>
 
 **4.2- How does the revenue stack differ by acquisition channel?**
 
@@ -225,6 +230,8 @@ When Users stop transacting, how often do they return and generate revenue again
   <img src="images/05_1_LTV_to_CAC_ratio.png" width="85%">
 </p>
 
+<br>
+
 **5.2 - How long does it take to recover CAC (payback period)?**
 
 <p align="center">
@@ -240,6 +247,8 @@ When Users stop transacting, how often do they return and generate revenue again
 <p align="center">
   <img src="images/06_1_IQR_revenue_outliers.png" width="85%">
 </p>
+
+<br>
 
 **6.2 - How concentrated is revenue across users (Pareto curve analysis)?**
 
