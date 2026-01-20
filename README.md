@@ -138,20 +138,29 @@ Once users are active, how consistently do they return and use the product over 
 **2.1 - What are the month-over-month retention and churn rates for revenue-active users?** <br>
 
 <p align="center">
-  <img src="images/01_2_monthly_stickiness_ratio.png" width="85%">
+  <img src="images/02_1_MOM_churn_and_retention_rate.png" width="85%">
 </p>
 
 **2.2 - How often do lapsed users return and transact again?** <br>
 
 <p align="center">
-  <img src="images/01_2_monthly_stickiness_ratio.png" width="85%">
+  <img src="images/02_2_MOM_reactivation_rate.png" width="85%">
 </p>
 
 ## 3 - Customer Value (LTV)**
 
 **3.1- How does 180-day LTV vary by signup cohort?**
 
+<p align="center">
+  <img src="images/03_1_cohort_ltv_180d.png" width="85%">
+</p>
+
+
 **3.2- Which acquisition channels generate the strongest early LTV?**
+
+<p align="center">
+  <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
+</p>
 
 ## 4 - Monetization Mechanics**
 
