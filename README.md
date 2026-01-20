@@ -28,6 +28,7 @@ Activation & engagement analytics, retention and reactivation analysis, cohort L
 - Is churn permanent, or can users be reactivated?
 - Who actually generates revenue, and how concentrated is that value?
 - Do users generate enough lifetime value to justify their acquisition cost?
+- How fragile is revenue if the top revenue-contributing users churn (revenue concentration risk)?
 
 <br>
 
