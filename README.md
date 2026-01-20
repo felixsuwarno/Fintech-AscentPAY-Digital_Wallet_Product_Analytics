@@ -114,6 +114,10 @@ How long does it take users to complete their first transaction after signup, an
 **1.2 - Product Engagement (Monthly Stickiness)** <br>
 Once users are active, how consistently do they return and use the product over time?
 
+<p align="center">
+  <img src="images/01_2_monthly_stickiness_ratio.png" width="85%">
+</p>
+
 **Method**
 - Define product activity as any transaction or in-app event
 - Compute monthly DAU and MAU for 2024
