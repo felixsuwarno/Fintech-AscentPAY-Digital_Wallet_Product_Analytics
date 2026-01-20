@@ -135,18 +135,50 @@ Once users are active, how consistently do they return and use the product over 
 
 ## 2 - Retention, Churn & Reactivation
 
-**2.1 - What are the month-over-month retention and churn rates for revenue-active users?** <br>
+**2.1 - Month-over-Month Retention & Churn (Revenue-Active Users)** <br>
+What are the month-over-month retention and churn rates for revenue-active users?
 
 <p align="center">
   <img src="images/02_1_MOM_churn_and_retention_rate.png" width="85%">
 </p>
 
-**2.2 - How often do lapsed users return and transact again?** <br>
+#### Method
+- Define activity strictly as **revenue-generating transactions**
+- Identify users active in each calendar month of 2024
+- A user is **retained** if they transact in consecutive months
+- Month-over-month retention = retained users ÷ prior-month active users
+- Month-over-month churn = 1 − retention rate
+
+#### Key Insights
+- Early in the year, retention is extremely high (≈95–96%), indicating strong short-term continuation after first use.
+- Starting mid-year, churn accelerates sharply, with retention falling into the low–mid 70% range.
+- By late 2024, roughly **1 in 4 revenue-active users churn each month**, signaling structural retention weakness.
+- The pattern suggests initial product adoption is strong, but sustained month-over-month value is not being delivered to a large portion of users.
+- Revenue stability increasingly depends on a shrinking base of repeat users rather than broad ongoing engagement.
+
+
+**2.2 - Reactivation of Lapsed Users** <br>
+When Users stop transacting, how often do they return and generate revenue again?
 
 <p align="center">
   <img src="images/02_2_MOM_reactivation_rate.png" width="85%">
 </p>
 
+#### Method
+- Identify users with revenue-generating transactions in each month of 2024
+- Classify users as:
+  - **Retained**: active in both current and previous month
+  - **Reactivated**: active this month but inactive in the prior month
+- Reactivation rate = reactivated users ÷ users inactive in the prior month
+- Measure reactivation trends across the year
+
+#### Key Insights
+- Reactivation rises steadily through mid-year, peaking around **25–27%**, indicating some success in bringing lapsed users back.
+- After the peak, reactivation declines toward year-end, suggesting diminishing effectiveness of organic return behavior.
+- While reactivation partially offsets churn, it is **not sufficient to counteract rising monthly churn rates**.
+- The product relies more on reacquiring previously active users than on retaining them continuously.
+- This pattern points to episodic usage rather than durable habit formation.
+- 
 <br><br>
 
 ## 3 - Customer Value (LTV)**
