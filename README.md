@@ -179,7 +179,7 @@ When Users stop transacting, how often do they return and generate revenue again
 - While reactivation partially offsets churn, it is **not sufficient to counteract rising monthly churn rates**.
 - The product relies more on reacquiring previously active users than on retaining them continuously.
 - This pattern points to episodic usage rather than durable habit formation.
-- 
+  
 <br><br>
 
 ## 3 - Customer Value (LTV)**
