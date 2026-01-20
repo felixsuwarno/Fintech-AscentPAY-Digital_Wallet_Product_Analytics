@@ -135,31 +135,39 @@ Once users are active, how consistently do they return and use the product over 
 
 ## 2 - Retention, Churn & Reactivation
 
-**2.1 - What are the month-over-month retention and churn rates for revenue-active users?**
+**2.1 - What are the month-over-month retention and churn rates for revenue-active users?** <br>
 
-**2.2 - How often do lapsed users return and transact again?**
+<p align="center">
+  <img src="images/01_2_monthly_stickiness_ratio.png" width="85%">
+</p>
+
+**2.2 - How often do lapsed users return and transact again?** <br>
+
+<p align="center">
+  <img src="images/01_2_monthly_stickiness_ratio.png" width="85%">
+</p>
 
 ## 3 - Customer Value (LTV)**
 
-**- How does 180-day LTV vary by signup cohort?**
+**3.1- How does 180-day LTV vary by signup cohort?**
 
-**- Which acquisition channels generate the strongest early LTV?**
+**3.2- Which acquisition channels generate the strongest early LTV?**
 
 ## 4 - Monetization Mechanics**
 
-**- What is the overall revenue stack (GMV, net revenue, take rate)?**
+**4.1- What is the overall revenue stack (GMV, net revenue, take rate)?**
 
-**- How does the revenue stack differ by acquisition channel?**
+**4.2- How does the revenue stack differ by acquisition channel?**
 
 ## 5 - Acquisition Efficiency
 
-**- Does LTV justify CAC by acquisition channel?**
+**5.1 - Does LTV justify CAC by acquisition channel?**
 
-**- How long does it take to recover CAC (payback period)?**
+**5.2 - How long does it take to recover CAC (payback period)?**
 
 ## 6 - Revenue Concentration & Risk
 
-**- Are results skewed by extreme users (IQR-based revenue outliers)?**
+**6.1 - Are results skewed by extreme users (IQR-based revenue outliers)?**
 
 **- How concentrated is revenue across users (Pareto curve analysis)?**
 
