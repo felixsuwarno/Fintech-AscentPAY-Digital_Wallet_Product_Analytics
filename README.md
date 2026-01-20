@@ -190,13 +190,13 @@ Once users are active, how consistently do they return and use the product over 
 **5.1 - Does LTV justify CAC by acquisition channel?**
 
 <p align="center">
-  <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
+  <img src="images/05_1_LTV_to_CAC_ratio.png" width="85%">
 </p>
 
 **5.2 - How long does it take to recover CAC (payback period)?**
 
 <p align="center">
-  <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
+  <img src="images/05_2_CAC_payback_period.png" width="85%">
 </p>
 
 <br><br>
@@ -206,12 +206,14 @@ Once users are active, how consistently do they return and use the product over 
 **6.1 - Are results skewed by extreme users (IQR-based revenue outliers)?**
 
 <p align="center">
-  <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
+  <img src="images/06_1_IQR_revenue_outliers.png" width="85%">
 </p>
 
-**- How concentrated is revenue across users (Pareto curve analysis)?**
+**6.2 - How concentrated is revenue across users (Pareto curve analysis)?**
 
-
+<p align="center">
+  <img src="images/06_2_pareto_ltv_180d.png" width="85%">
+</p>
 
 
 
