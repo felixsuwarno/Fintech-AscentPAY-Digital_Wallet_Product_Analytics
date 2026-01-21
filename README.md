@@ -210,8 +210,8 @@ When Users stop transacting, how often do they return and generate revenue again
 
 ## 3 - Customer Value (LTV)**
 
-**3.1- How does 180-day LTV vary by signup cohort?** <br>
-How much net revenue do users generate within their first 180 days, depending on when they signed up?
+**3.1- 180-day LTV by Signup Cohort** <br>
+How much net revenue do users generate in their first 180 days by signup cohort?
 
 <p align="center">
   <img src="images/03_1_cohort_ltv_180d.png" width="85%">
@@ -239,7 +239,7 @@ How much net revenue do users generate within their first 180 days, depending on
 
 <br>
 
-**3.2- Which acquisition channels generate the strongest early LTV?** <br>
+**3.2- Early LTV by Acquisition Channel** <br>
 Which signup sources produce users who generate the most value in their first 180 days?
 
 <p align="center">
@@ -269,7 +269,7 @@ Which signup sources produce users who generate the most value in their first 18
 
 ## 4 - Monetization Mechanics**
 
-**4.1- What is the overall revenue stack (GMV, net revenue, take rate)?** <br>
+**4.1- Overall Revenue Stack (GMV, Net Revenue, Take Rate)** <br>
 How much transaction volume flows through the product, how much revenue AscentPAY captures, and how efficiently it monetizes that volume?
 
 <p align="center">
@@ -297,8 +297,8 @@ How much transaction volume flows through the product, how much revenue AscentPA
 
 <br>
 
-**4.2- How does the revenue stack differ by acquisition channel?** <br>
-Which transaction types contribute most to revenue, and how their contribution changes over time?
+**4.2- Revenue Mix by Transaction Channel** <br>
+Which transaction channel contribute most to revenue, and how their contribution changes over time?
 
 <p align="center">
   <img src="images/04_2b_ revenue_stack_per_channel_1.png" width="85%">
@@ -330,7 +330,7 @@ Which transaction types contribute most to revenue, and how their contribution c
 
 ## 5 - Acquisition Efficiency
 
-**5.1 - Does LTV justify CAC by acquisition channel?** <br>
+**5.1 - LTV vs CAC by Acquisition Channel** <br>
 Do customers generate enough lifetime value within 180 days to cover their acquisition cost?
 
 <p align="center">
@@ -359,7 +359,7 @@ Do customers generate enough lifetime value within 180 days to cover their acqui
 
 <br>
 
-**5.2 - How long does it take to recover CAC (payback period)?** <br>
+**5.2 - CAC Payback Period by Acquisition Channel** <br>
 How quickly does each acquisition channel generate enough revenue to repay its upfront acquisition cost?
 
 <p align="center">
@@ -389,7 +389,7 @@ How quickly does each acquisition channel generate enough revenue to repay its u
 
 ## 6 - Revenue Concentration & Risk
 
-**6.1 - Are results skewed by extreme users (IQR-based revenue outliers)?** <br>
+**6.1 - Revenue Skew from Extreme Users (IQR Analysis)** <br>
 Do a small number of users disproportionately influence total revenue outcomes?
 
 <p align="center">
@@ -420,7 +420,7 @@ Do a small number of users disproportionately influence total revenue outcomes?
 
 <br>
 
-**6.2 - How concentrated is revenue across users (Pareto curve analysis)?** <br>
+**6.2 - Revenue Concentration Across Users (Pareto Analysis)** <br>
 What share of total revenue is driven by the top X% of users?
 
 <p align="center">
