@@ -191,6 +191,20 @@ When Users stop transacting, how often do they return and generate revenue again
   <img src="images/03_1_cohort_ltv_180d.png" width="85%">
 </p>
 
+#### Method
+- Restrict users to **2024 signup cohorts**
+- Track each user’s net revenue for the **first 180 days post-signup**
+- Aggregate total 180-day net revenue by signup month
+- Include all users (including zero-revenue users) to avoid survivorship bias
+- Report cohort-level LTV totals and monetization penetration
+
+#### Key Insights
+- Earlier 2024 signup cohorts generate meaningfully higher 180-day LTV than cohorts acquired later in the year.
+- Peak cohort value occurs in Q1–Q2, followed by a steady decline for cohorts acquired after mid-year.
+- The percentage of monetized users remains relatively stable across cohorts, indicating that **LTV decline is driven by lower per-user value**, not fewer paying users.
+- Later cohorts monetize, but at materially lower intensity, suggesting weakening user quality or product value realization over time.
+- This pattern indicates early growth cohorts benefited from stronger engagement or higher-value use cases that were not sustained later in the year.
+
 <br>
 
 **3.2- Which acquisition channels generate the strongest early LTV?**
@@ -198,6 +212,18 @@ When Users stop transacting, how often do they return and generate revenue again
 <p align="center">
   <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
 </p>
+#### Method
+- Restrict users to **2024 signup cohorts**
+- Calculate 180-day post-signup net revenue at the user level
+- Aggregate cohort LTV by **acquisition channel and signup month**
+- Compare early LTV performance across paid, organic, referral, and partner channels
+
+#### Key Insights
+- Employer partnership users consistently generate the highest 180-day LTV across cohorts.
+- Referral users show strong early value generation, outperforming organic and paid channels.
+- Organic users deliver moderate LTV but show clear decay in later cohorts.
+- Paid acquisition users generate the weakest early LTV despite slower activation and higher acquisition costs.
+- Channel-level LTV dispersion highlights a structural mismatch between **where users are acquired** and **where value is actually generated**.
 
 <br><br>
 
