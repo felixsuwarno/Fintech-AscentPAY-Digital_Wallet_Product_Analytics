@@ -185,7 +185,7 @@ When Users stop transacting, how often do they return and generate revenue again
 
 ## 3 - Customer Value (LTV)**
 
-**3.1- How does 180-day LTV vary by signup cohort?**
+**3.1- How does 180-day LTV vary by signup cohort?** <br>
 How much net revenue do users generate within their first 180 days, depending on when they signed up?
 
 <p align="center">
@@ -209,7 +209,7 @@ How much net revenue do users generate within their first 180 days, depending on
 
 <br>
 
-**3.2- Which acquisition channels generate the strongest early LTV?**
+**3.2- Which acquisition channels generate the strongest early LTV?** <br>
 Which signup sources produce users who generate the most value in their first 180 days?
 
 <p align="center">
@@ -232,7 +232,7 @@ Which signup sources produce users who generate the most value in their first 18
 
 ## 4 - Monetization Mechanics**
 
-**4.1- What is the overall revenue stack (GMV, net revenue, take rate)?**
+**4.1- What is the overall revenue stack (GMV, net revenue, take rate)?** <br>
 How much transaction volume flows through the product, how much revenue AscentPAY captures, and how efficiently it monetizes that volume?
 
 <p align="center">
@@ -254,7 +254,7 @@ How much transaction volume flows through the product, how much revenue AscentPA
 
 <br>
 
-**4.2- How does the revenue stack differ by acquisition channel?**
+**4.2- How does the revenue stack differ by acquisition channel?** <br>
 Which transaction types contribute most to revenue, and how their contribution changes over time?
 
 <p align="center">
@@ -281,19 +281,47 @@ Which transaction types contribute most to revenue, and how their contribution c
 
 ## 5 - Acquisition Efficiency
 
-**5.1 - Does LTV justify CAC by acquisition channel?**
+**5.1 - Does LTV justify CAC by acquisition channel?** <br>
 
 <p align="center">
   <img src="images/05_1_LTV_to_CAC_ratio.png" width="85%">
 </p>
 
+#### Method
+- Calculate **180-day LTV** per user by acquisition channel
+- Aggregate **customer acquisition cost (CAC)** by channel
+- Compute **LTV-to-CAC ratio** as:  
+  180-day LTV ÷ CAC
+- Ratios above **100%** indicate channels that fully recover acquisition cost within 180 days
+
+#### Key Insights
+- **Referral users fully recover CAC (≈106%)**, making this the most efficient channel.
+- **Employer partnerships perform well (≈74%)**, but do not fully pay back within 180 days.
+- **Paid ads are highly inefficient (≈12%)**, failing to recover even a fraction of CAC.
+- Organic acquisition delivers scale but lacks direct CAC attribution in this comparison.
+- Overall, growth efficiency is **constrained by over-reliance on paid acquisition**.
+
 <br>
 
-**5.2 - How long does it take to recover CAC (payback period)?**
+**5.2 - How long does it take to recover CAC (payback period)?** <br>
+How quickly does each acquisition channel generate enough revenue to repay its upfront acquisition cost?
 
 <p align="center">
   <img src="images/05_2_CAC_payback_period.png" width="85%">
 </p>
+
+#### Method
+- Track cumulative net revenue per user over time
+- Measure **average days required to reach CAC breakeven**
+- Calculate **percentage of users who repay CAC within 180 days**
+- Report metrics by acquisition channel
+
+#### Key Insights
+- **Referral users repay CAC fastest (~78 days)** and at the highest completion rate (~31%).
+- **Employer partner users repay more slowly (~86 days)** with moderate recovery rates (~24%).
+- **Paid ads have extremely long payback (~121 days)** with almost no users recovering CAC (~3%).
+- Many paid users **never repay CAC**, even after 180 days.
+- This creates sustained capital drag and limits scalable growth.
 
 <br><br>
 
