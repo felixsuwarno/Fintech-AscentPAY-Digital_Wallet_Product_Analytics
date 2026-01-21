@@ -282,6 +282,7 @@ Which transaction types contribute most to revenue, and how their contribution c
 ## 5 - Acquisition Efficiency
 
 **5.1 - Does LTV justify CAC by acquisition channel?** <br>
+Do customers generate enough lifetime value within 180 days to cover their acquisition cost?
 
 <p align="center">
   <img src="images/05_1_LTV_to_CAC_ratio.png" width="85%">
@@ -327,22 +328,54 @@ How quickly does each acquisition channel generate enough revenue to repay its u
 
 ## 6 - Revenue Concentration & Risk
 
-**6.1 - Are results skewed by extreme users (IQR-based revenue outliers)?**
+**6.1 - Are results skewed by extreme users (IQR-based revenue outliers)?** <br>
+Do a small number of users disproportionately influence total revenue outcomes?
 
 <p align="center">
   <img src="images/06_1_IQR_revenue_outliers.png" width="85%">
 </p>
 
+#### Method
+- Aggregate **total net revenue per user** across all 2024 transactions
+- Include refunds as negative revenue to reflect true net contribution
+- Rank users by total net revenue
+- Segment users into percentile-based buckets:
+  - Top 1%, 5%, 10%, 20%
+  - Middle 60%
+  - Bottom 20%, 10%, 5%, 1%
+- Compare **user count**, **average revenue per user**, and **total revenue** by bucket
+
+#### Key Insights
+- Revenue is **heavily skewed toward the top user segments**, with the top 20% contributing the majority of net revenue.
+- The **middle 60% of users generate low average revenue**, despite representing the largest share of the user base.
+- Bottom-percentile users contribute **negligible revenue**, indicating limited monetization depth across most users.
+- Business performance is **highly sensitive to the behavior of a small set of high-value users**, increasing revenue volatility risk.
+
 <br>
 
-**6.2 - How concentrated is revenue across users (Pareto curve analysis)?**
+**6.2 - How concentrated is revenue across users (Pareto curve analysis)?** <br>
+What share of total revenue is driven by the top X% of users?
 
 <p align="center">
   <img src="images/06_2_pareto_ltv_180d.png" width="85%">
 </p>
 
+#### Method
+- Restrict analysis to **2024 signup cohort**
+- Calculate each user’s **180-day net LTV** (refunds included)
+- Sort users by revenue contribution (descending)
+- Compute cumulative:
+  - Percentage of users
+  - Percentage of total revenue
+- Plot Pareto curve and benchmark against equal distribution
 
+#### Key Insights
+- The **top 1% of users generate ~14% of total revenue**.
+- The **top 5% generate ~43%**, and the **top 10% generate ~63%** of revenue.
+- The **top 20% of users account for ~85% of total revenue**, confirming a strong Pareto effect.
+- Revenue sustainability depends disproportionately on a **small fraction of power users**, creating concentration and churn risk at the top end.
 
+<br>
 
 
 
