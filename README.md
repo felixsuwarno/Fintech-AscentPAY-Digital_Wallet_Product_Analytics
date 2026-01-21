@@ -186,17 +186,19 @@ When Users stop transacting, how often do they return and generate revenue again
 ## 3 - Customer Value (LTV)**
 
 **3.1- How does 180-day LTV vary by signup cohort?**
+How much net revenue do users generate within their first 180 days, depending on when they signed up?
 
 <p align="center">
   <img src="images/03_1_cohort_ltv_180d.png" width="85%">
 </p>
 
 #### Method
-- Restrict users to **2024 signup cohorts**
-- Track each user’s net revenue for the **first 180 days post-signup**
+- Restrict analysis to users who signed up in 2024
+- Track each user’s net revenue during the first 180 days after signup
 - Aggregate total 180-day net revenue by signup month
-- Include all users (including zero-revenue users) to avoid survivorship bias
-- Report cohort-level LTV totals and monetization penetration
+- Include all users, including those with zero revenue, to avoid survivorship bias
+- Report total 180-day revenue per signup cohort and the share of users who generated any revenue
+
 
 #### Key Insights
 - Earlier 2024 signup cohorts generate meaningfully higher 180-day LTV than cohorts acquired later in the year.
@@ -208,6 +210,7 @@ When Users stop transacting, how often do they return and generate revenue again
 <br>
 
 **3.2- Which acquisition channels generate the strongest early LTV?**
+Which signup sources produce users who generate the most value in their first 180 days?
 
 <p align="center">
   <img src="images/03_2_cohort_ltv_180d_per_acquisition_channel.png" width="85%">
@@ -230,14 +233,29 @@ When Users stop transacting, how often do they return and generate revenue again
 ## 4 - Monetization Mechanics**
 
 **4.1- What is the overall revenue stack (GMV, net revenue, take rate)?**
+How much transaction volume flows through the product, how much revenue AscentPAY captures, and how efficiently it monetizes that volume?
 
 <p align="center">
   <img src="images/04_1_ revenue_stack_total.png" width="85%">
 </p>
 
+#### Method
+- Restrict transactions to **monetizable spend activity** (card payments, bill pay, FX payments)
+- Exclude top-ups and peer-to-peer transfers from GMV
+- Aggregate monthly **GMV** and **net revenue** for calendar year 2024
+- Compute take rate as `net revenue ÷ GMV`
+
+#### Key Insights
+- Net revenue grows steadily through the first half of the year, peaking mid-year before declining.
+- Take rate remains **remarkably stable (~1.18%–1.30%)** across months.
+- This indicates revenue changes are driven primarily by **transaction volume**, not pricing or fee expansion.
+- Monetization efficiency is consistent, but revenue is highly sensitive to usage momentum.
+- When activity slows, revenue falls proportionally, exposing limited pricing leverage.
+
 <br>
 
 **4.2- How does the revenue stack differ by acquisition channel?**
+Which transaction types contribute most to revenue, and how their contribution changes over time?
 
 <p align="center">
   <img src="images/04_2b_ revenue_stack_per_channel_1.png" width="85%">
@@ -246,6 +264,18 @@ When Users stop transacting, how often do they return and generate revenue again
 <p align="center">
   <img src="images/04_2b_ revenue_stack_per_channel_2.png" width="85%">
 </p>
+
+#### Method
+- Segment monetizable transactions by type (bill pay, card payments, withdrawals)
+- Aggregate monthly net revenue by transaction channel
+- Compare relative contribution and trend consistency across channels
+
+#### Key Insights
+- **Bill pay and card payments** are the dominant revenue drivers throughout the year.
+- Withdrawals contribute meaningfully but remain a secondary revenue source.
+- Revenue composition is relatively stable, with no single channel showing explosive growth.
+- The lack of a breakout monetization channel limits upside without overall usage growth.
+- The platform relies on **balanced transaction mix**, not a high-margin feature.
 
 <br><br>
 
