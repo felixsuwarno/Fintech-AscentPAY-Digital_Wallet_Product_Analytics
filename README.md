@@ -107,14 +107,8 @@ How long does it take users to complete their first transaction after signup, an
 - Users acquired through employer partnerships activate the fastest, reaching their first transaction in under two weeks on average.
 - Referral users activate relatively quickly, suggesting trust and intent accelerate early usage.
 - Organic users take meaningfully longer to activate, indicating weaker initial intent or higher onboarding friction.
-- Paid acquisition users are the slowest to activate by a wide margin, taking nearly a month on average to complete their first transaction.
+- Paid acquisition users are the slowest to activate by a wide margin, taking more than a month on average to complete their first transaction.
 - Slower activation delays revenue realization and increases early churn risk, especially for paid acquisition channels.
-
-#### **Business Implications**
-
-Faster activation from employer partners and referral channels allows revenue to start earlier and reduces the risk of early churn. In contrast, slow activation among paid users delays monetization and makes it harder to recover acquisition costs. 
-
-Because activation speed strongly relates to later retention and lifetime value, it should be treated as an early indicator of user quality. Under current conditions, improving activation for slow channels is likely to deliver higher returns than increasing acquisition spend.
 
 <br>
 
@@ -132,13 +126,14 @@ Once users are active, how consistently do they return and use the product over 
 - Track stickiness trends across the calendar year
 
 **Key Insights**
-- Users from employer partnerships activate the fastest, usually within two weeks.
-- Referral users also activate quickly, showing strong intent early on.
-- Organic users take longer to make their first transaction.
-- Paid users are the slowest to activate, often taking close to a month.
-- Slow activation delays revenue and increases the chance that users leave early.
+- A small but consistent share of monthly users return to the product on a typical day.
+- Stickiness improves early in the year, then stabilizes rather than continuously growing.
+- Daily usage does not scale one-to-one with monthly growth.
+- Even at peak usage, most users are not daily users.
+- Engagement is steady but not habit-forming for the majority of users.
 
-#### **Business Implications**
+
+**1.3 - Business Implications** <br>
 
 Faster activation allows revenue to start earlier and reduces the chance that users leave before generating value. When activation is slow, paid acquisition becomes less effective and harder to recover its cost. Activation speed also reflects how clear the product’s use case is to the user, making it an early signal of user quality. 
 
