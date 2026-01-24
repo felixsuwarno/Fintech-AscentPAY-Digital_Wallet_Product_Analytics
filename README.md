@@ -98,10 +98,11 @@ How long does it take users to complete their first transaction after signup, an
 </p>
 
 **Method**
-- Identify each user’s first transaction timestamp after signup
-- Calculate the number of days from signup to first transaction
-- Average activation time by acquisition channel
-- Restrict analysis to 2024 signup cohort
+- Identify users who made at least one transaction after signup
+- For each of those users, find the date of their first transaction
+- Calculate the number of days between signup and first transaction
+- Average this time by acquisition channel
+- Restrict the analysis to users who signed up in 2024
 
 **Key Insights**
 - Users acquired through employer partnerships activate the fastest, reaching their first transaction in under two weeks on average.
@@ -120,25 +121,28 @@ Once users are active, how consistently do they return and use the product over 
 </p>
 
 **Method**
-- Define product activity as any transaction or in-app event
-- Compute monthly DAU and MAU for 2024
-- Calculate monthly stickiness as Avg DAU / MAU
-- Track stickiness trends across the calendar year
+- Treat any transaction or in-app event as product activity
+- Count daily active users (DAU) for each day
+- Average daily active users within each month
+- Count monthly active users (MAU) as distinct users per month
+- Calculate monthly stickiness as average DAU divided by MAU
+- Restrict the analysis to calendar year 2024
 
 **Key Insights**
-- A small but consistent share of monthly users return to the product on a typical day.
-- Stickiness improves early in the year, then stabilizes rather than continuously growing.
-- Daily usage does not scale one-to-one with monthly growth.
-- Even at peak usage, most users are not daily users.
-- Engagement is steady but not habit-forming for the majority of users.
+- Only a small share of monthly users use the product on a typical day.
+- Stickiness increases early in the year, then levels off with a slight decline.
+- Even at its peak, fewer than one in five monthly users are active daily.
+- Daily usage remains limited relative to the overall monthly user base.
 
 <br>
 
 **1.3 - Business Implications** <br>
 
-Faster activation allows revenue to start earlier and reduces the chance that users leave before generating value. When activation is slow, paid acquisition becomes less effective and harder to recover its cost. Activation speed also reflects how clear the product’s use case is to the user, making it an early signal of user quality. 
-
-Improving activation therefore requires more than smoother onboarding — users activate faster when they have a clear reason to transact, an obvious first action, and minimal setup before their first revenue-generating transaction.
+- Users make a first transaction, but most do not use the product often after that, so the business should focus on what users do after their first transaction.
+- Users reach their first transaction quickly, but they do not come back many times, so the first transaction should be treated as the start, not the end.
+- Making users activate faster does not make them use the product more often, so success should not be measured only by activation speed.
+- Many users use the product only a few days in a month, so the product needs clearer reasons for users to come back more often.
+- Improving activation speed alone will not change how often users use the product, so effort should be split between faster activation and more frequent use.
 
 <br><br>
 
@@ -153,21 +157,18 @@ What are the month-over-month retention and churn rates for revenue-active users
 </p>
 
 #### Method
-- Define activity strictly as **revenue-generating transactions**
-- Identify users active in each calendar month of 2024
-- A user is **retained** if they transact in consecutive months
-- Month-over-month retention = retained users ÷ prior-month active users
-- Month-over-month churn = 1 − retention rate
+- Treat user activity as having at least one transaction in a month
+- Identify users with transactions in each calendar month of 2024
+- A user is retained if they transact in two consecutive months
+- Calculate month-over-month retention as retained users divided by prior-month active users
+- Calculate month-over-month churn as users active in the prior month who do not transact again in the current month
 
 #### Key Insights
-- Early in the year, most users continue transacting after their first use.
-- From mid-year onward, many users stop transacting month to month.
+- Early in the year, most revenue-active users continue transacting month to month.
+- From mid-year onward, more users stop transacting between consecutive months.
 - By late 2024, about 1 out of every 4 revenue-active users stops transacting each month.
-- This shows that while users try the product, many do not find enough reason to keep using it.
-- Over time, revenue relies on a smaller group of repeat users instead of the broader user base.
-
-#### **Business Implications**
-Strong early usage makes the product look healthy at first, but many users stop using it later. High monthly churn limits how much revenue can grow and makes revenue harder to predict. Focusing only on getting users to activate is not enough for long-term growth. Under current conditions, reducing churn would have a bigger impact on revenue than acquiring more users.
+- This indicates a decline in month-over-month transaction continuity over time.
+- Continued usage becomes concentrated among fewer users as the year progresses.
 
 <br>
 
