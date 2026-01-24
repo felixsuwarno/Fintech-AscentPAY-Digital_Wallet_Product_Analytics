@@ -239,20 +239,20 @@ Which signup sources produce users who generate the most value in their first 18
 - The report is filtered to show only 2024 signup cohorts in Tableau; the SQL itself is not restricted to 2024.
 
 #### Key Insights
-- Users acquired through employer partnerships generate the highest 180-day revenue across signup months.
-- Referral users consistently generate strong early revenue, second only to employer partnerships.
-- Organic users generate lower 180-day revenue than employer and referral channels.
-- Paid acquisition users generate the lowest 180-day revenue across signup cohorts.
-- 180-day revenue declines for later signup months across all acquisition channels.
+- Organic cohorts generate the highest total 180-day revenue in most months (it leads in 10 out of 12 signup months).
+- Employer_partner is usually second, and is #1 only in May and June.
+- Referral is consistently strong but generally below organic and employer_partner (often #3, and #2 in a few late-year months).
+- Paid_ads is the lowest 180-day revenue channel every month.
+- Across all channels, 180-day revenue is much higher in the first half of 2024 than in the second half (later signup cohorts generate less total 180-day revenue than early cohorts).
 
 <br>
 
 **3.3 - Business Implications** <br>
-- Earlier signup cohorts generate more revenue in their first 180 days than later cohorts, so user quality or monetization effectiveness is weakening over time and should be monitored before scaling further.
-- Employer partner and referral channels consistently produce higher early revenue, so growth efforts should prioritize these channels over volume-driven acquisition.
-- Paid acquisition brings users who generate less revenue within 180 days, so spend on this channel should be limited or tightly controlled unless unit economics improve.
-- Organic acquisition produces moderate revenue but weakens for later cohorts, so relying on organic growth alone may not sustain revenue performance.
-- User growth and revenue growth are not aligned, so acquisition decisions should be evaluated based on early revenue contribution, not signup volume.
+- Earlier 2024 signup cohorts generate more total revenue in their first 180 days than later cohorts, largely because later cohorts are smaller, so revenue trends should be monitored before scaling growth.
+- Employer partner and referral users generate higher 180-day revenue per user than other channels, making them more efficient sources of early customer value.
+- Paid acquisition users generate the lowest 180-day revenue, so spend on this channel should be carefully controlled unless early revenue improves.
+- Organic acquisition generates the highest total 180-day revenue overall, but this declines for later signup cohorts in line with the overall drop in cohort size.
+- Acquisition decisions should consider both total revenue and revenue per user, since channels differ in how much value each user generates early on.
 
 <br><br>
 
