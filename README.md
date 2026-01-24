@@ -189,9 +189,13 @@ When Users stop transacting, how often do they return and generate revenue again
 #### Key Insights
 Reactivation rates increases through mid-year, peaking around 25–27%, then decline toward the end of 2024.
 
-#### **Business Implications**
+<br>
 
-Some users return after being inactive, but this behavior weakens later in the year. Because reactivation does not strengthen over time, it should not be relied on as the main way to offset ongoing churn.
+**1.3 - Business Implications** <br>
+- More users stop transacting month to month as the year goes on, and reactivation does not increase enough to compensate, so the active user base naturally shrinks over time.
+- Although some users return after being inactive, this behavior weakens later in the year, so reactivation cannot be relied on to offset rising churn.
+- Because fewer users stay active and fewer return after dropping out, maintaining revenue increasingly depends on keeping existing users from leaving in the first place.
+- Efforts should focus more on preventing users from stopping their activity than on trying to bring them back after they leave.
 
 <br><br>
 
