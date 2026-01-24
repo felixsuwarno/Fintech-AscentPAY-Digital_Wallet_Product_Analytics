@@ -457,9 +457,31 @@ Based on the data, AscentPAY’s main problem is that revenue does not last over
 
 **1. Rebalance Growth Away from Paid Acquisition**
 
-- Users from paid ads take the longest time to activate, generate the lowest early value, and rarely recover their acquisition cost.
-- Scaling paid acquisition under current conditions increases churn and wastes capital.
+- Users acquired through paid ads take the longest to activate, generate the lowest early value, and rarely recover their acquisition cost. As a result, scaling paid acquisition under current conditions increases churn and wastes capital.
 - Growth effort should shift toward referral and employer partnership channels, which consistently produce higher-value users.
 
+**2. Treat Retention as the Main Growth Problem**
 
+- Users activate quickly, but many stop using the product after a few months.
+- Too many users leave each month, which makes revenue unstable.
+- Improving the experience after the first transaction is more effective than acquiring more users.
+
+**3. Protect and Focus on High-Value Users**
+
+- Most revenue comes from a small group of users.
+- Losing these users would significantly reduce revenue.
+- Retention efforts should focus on keeping these high-value users active.
+
+**4. Do Not Rely on Reactivation as a Growth Strategy**
+- Some users return after leaving, but most do not stay active for long.
+- Many users use the product only when they need it, not regularly.
+- It is better to keep users from leaving than to try to bring them back.
+
+**5. Keep Pricing Stable and Increase Usage**
+- Prices and fees are already stable and working as expected.
+- Revenue grows mainly when users make more transactions.
+- The product should focus on getting users to use it more often, not on changing prices.
+
+**Strategic Focus Going Forward**
+To grow in a healthy way, AscentPAY should focus on keeping users active, spending acquisition budget more carefully, and reducing dependence on a small group of users. Without fixing churn and revenue concentration, adding more users will increase risk instead of long-term growth.
 
