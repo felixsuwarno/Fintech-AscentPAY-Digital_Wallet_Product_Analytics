@@ -209,23 +209,17 @@ How much net revenue do users generate in their first 180 days by signup cohort?
 </p>
 
 #### Method
-- Restrict analysis to users who signed up in 2024
-- Track each user’s net revenue during the first 180 days after signup
-- Aggregate total 180-day net revenue by signup month
+- Restrict the analysis to users who signed up in 2024
+- For each user, sum net revenue generated within the first 180 days after signup, treating refunds as negative revenue
+- Ignore transactions that occurred before signup or after the 180-day window
+- Aggregate total 180-day revenue by signup month
 - Include all users, including those with zero revenue, to avoid survivorship bias
-- Report total 180-day revenue per signup cohort and the share of users who generated any revenue
+- Report total 180-day revenue per signup cohort and the share of users with LTV greater than zero
 
 #### Key Insights
 - Users who signed up earlier in 2024 generate more revenue in their first 180 days than users who signed up later.
-- Cohorts from Q1–Q2 perform the best, while cohorts after mid-year generate steadily less value.
-- Users who signed up later in 2024 still try the product, but they don’t use it as much.
-- The decline in LTV comes from users spending less over time, not from fewer users making transactions.
-
-#### **Business Implications**
-
-Because users who signed up later in 2024 generate less revenue, the quality of growth is declining over time. Most users still make at least one transaction, so the issue is not getting users to try the product, but getting them to use it more. Earlier cohorts likely had clearer or more valuable reasons to keep transacting, which later cohorts did not sustain. 
-
-To improve outcomes, AscentPAY should focus on increasing how often and how much users transact, rather than simply increasing the number of new signups.
+- Signup cohorts from Q1–Q2 generate the highest 180-day revenue, while cohorts after mid-year generate less.
+- Total 180-day revenue declines for later signup cohorts as the year progresses.
 
 <br>
 
