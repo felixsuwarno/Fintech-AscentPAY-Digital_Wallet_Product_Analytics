@@ -164,11 +164,9 @@ What are the month-over-month retention and churn rates for revenue-active users
 - Calculate month-over-month churn as users active in the prior month who do not transact again in the current month
 
 #### Key Insights
-- Early in the year, most revenue-active users continue transacting month to month.
-- From mid-year onward, more users stop transacting between consecutive months.
+- Early in the year, most revenue-active users continue transacting month to month, but from mid-year onward more users stop transacting between consecutive months.
 - By late 2024, about 1 out of every 4 revenue-active users stops transacting each month.
-- This indicates a decline in month-over-month transaction continuity over time.
-- Continued usage becomes concentrated among fewer users as the year progresses.
+- Over time, the level of churn increases and more users stop transacting.
 
 <br>
 
@@ -180,19 +178,20 @@ When Users stop transacting, how often do they return and generate revenue again
 </p>
 
 #### Method
-- Identify users with revenue-generating transactions in each month of 2024
+- Identify users with at least one transaction in each month of 2024
+- Build a universe of users who transacted at least once during 2024
 - Classify users as:
-  - **Retained**: active in both current and previous month
-  - **Reactivated**: active this month but inactive in the prior month
-- Reactivation rate = reactivated users ÷ users inactive in the prior month
-- Measure reactivation trends across the year
+  - **Retained**: transacted in both the current and previous month
+  - **Reactivated**: transacted in the current month but not in the previous
+- Calculate reactivation rate as reactivated users divided by users who were inactive in the prior month
+- Track reactivation patterns across the year
 
 #### Key Insights
-Reactivation increases through mid-year, peaking around 25–27%, then declines toward the end of 2024.
+Reactivation rates increases through mid-year, peaking around 25–27%, then decline toward the end of 2024.
 
 #### **Business Implications**
 
-Some users return after being inactive, but this behavior weakens later in the year. Because reactivation does not strengthen over time, it cannot be relied on as a primary way to improve long-term performance.
+Some users return after being inactive, but this behavior weakens later in the year. Because reactivation does not strengthen over time, it should not be relied on as the main way to offset ongoing churn.
 
 <br><br>
 
