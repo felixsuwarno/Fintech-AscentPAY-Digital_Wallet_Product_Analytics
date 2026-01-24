@@ -191,15 +191,11 @@ When Users stop transacting, how often do they return and generate revenue again
 - Measure reactivation trends across the year
 
 #### Key Insights
-- Many users return after a break, with reactivation reaching about 25–27% by mid-year.
-- After mid-year, fewer lapsed users come back.
-- Reactivation helps, but it does not make up for the number of users leaving each month.
-- The product brings some users back, but many do not stay active continuously.
-- Usage appears occasional rather than part of users’ regular habits.
+Reactivation increases through mid-year, peaking around 25–27%, then declines toward the end of 2024.
 
 #### **Business Implications**
 
-Reactivation brings some users back, but it does not create steady growth. Revenue is more reliable when users keep using the product than when they stop and later return. As reactivation slows, more churn remains unrecovered, making churn reduction more important than relying on users to come back.
+Some users return after being inactive, but this behavior weakens later in the year. Because reactivation does not strengthen over time, it cannot be relied on as a primary way to improve long-term performance.
 
 <br><br>
 
