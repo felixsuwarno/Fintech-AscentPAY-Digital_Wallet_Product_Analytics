@@ -132,6 +132,7 @@ Once users are active, how consistently do they return and use the product over 
 - Even at peak usage, most users are not daily users.
 - Engagement is steady but not habit-forming for the majority of users.
 
+<br>
 
 **1.3 - Business Implications** <br>
 
