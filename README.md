@@ -239,19 +239,20 @@ Which signup sources produce users who generate the most value in their first 18
 - The report is filtered to show only 2024 signup cohorts in Tableau; the SQL itself is not restricted to 2024.
 
 #### Key Insights
-- Users acquired through employer partnerships generate the highest revenue within their first 180 days.
-- Referral users also generate strong early revenue compared to organic and paid users.
-- Organic users generate moderate early revenue, which declines for later signup cohorts.
+- Users acquired through employer partnerships generate the highest 180-day revenue across signup months.
+- Referral users consistently generate strong early revenue, second only to employer partnerships.
+- Organic users generate lower 180-day revenue than employer and referral channels.
 - Paid acquisition users generate the lowest 180-day revenue across signup cohorts.
-- Higher user volume by channel does not directly translate into higher early revenue.
+- 180-day revenue declines for later signup months across all acquisition channels.
 
 <br>
 
 **3.3 - Business Implications** <br>
-- More users stop transacting month to month as the year goes on, and reactivation does not increase enough to compensate, so the active user base naturally shrinks over time.
-- Although some users return after being inactive, this behavior weakens later in the year, so reactivation cannot be relied on to offset rising churn.
-- Because fewer users stay active and fewer return after dropping out, maintaining revenue increasingly depends on keeping existing users from leaving in the first place.
-- Efforts should focus more on preventing users from stopping their activity than on trying to bring them back after they leave.
+- Earlier signup cohorts generate more revenue in their first 180 days than later cohorts, so user quality or monetization effectiveness is weakening over time and should be monitored before scaling further.
+- Employer partner and referral channels consistently produce higher early revenue, so growth efforts should prioritize these channels over volume-driven acquisition.
+- Paid acquisition brings users who generate less revenue within 180 days, so spend on this channel should be limited or tightly controlled unless unit economics improve.
+- Organic acquisition produces moderate revenue but weakens for later cohorts, so relying on organic growth alone may not sustain revenue performance.
+- User growth and revenue growth are not aligned, so acquisition decisions should be evaluated based on early revenue contribution, not signup volume.
 
 <br><br>
 
