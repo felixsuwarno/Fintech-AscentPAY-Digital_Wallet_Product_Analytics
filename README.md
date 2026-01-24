@@ -208,7 +208,7 @@ When Users stop transacting, how often do they return and generate revenue again
   
 <br><br>
 
-## 3 - Customer Value (LTV)**
+## 3 - Customer Value (LTV)
 
 **3.1- 180-day LTV by Signup Cohort** <br>
 How much net revenue do users generate in their first 180 days by signup cohort?
@@ -267,7 +267,7 @@ Which signup sources produce users who generate the most value in their first 18
 
 <br><br>
 
-## 4 - Monetization Mechanics**
+## 4 - Monetization Mechanics
 
 **4.1- Overall Revenue Stack (GMV, Net Revenue, Take Rate)** <br>
 How much transaction volume flows through the product, how much revenue AscentPAY captures, and how efficiently it monetizes that volume?
@@ -450,10 +450,16 @@ What share of total revenue is driven by the top X% of users?
 
 <br>
 
+## 7 - Executive Recommendations & Strategic Focus
+<br>
 
+Based on the data, AscentPAY’s main problem is that revenue does not last over time and depends too much on a small group of users. The recommendations below focus on the changes that would have the biggest impact on the business.
 
+**1. Rebalance Growth Away from Paid Acquisition**
 
-
+- Users from paid ads take the longest time to activate, generate the lowest early value, and rarely recover their acquisition cost.
+- Scaling paid acquisition under current conditions increases churn and wastes capital.
+- Growth effort should shift toward referral and employer partnership channels, which consistently produce higher-value users.
 
 
 
