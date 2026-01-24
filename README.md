@@ -191,7 +191,7 @@ Reactivation rates increases through mid-year, peaking around 25–27%, then dec
 
 <br>
 
-**1.3 - Business Implications** <br>
+**2.3 - Business Implications** <br>
 - More users stop transacting month to month as the year goes on, and reactivation does not increase enough to compensate, so the active user base naturally shrinks over time.
 - Although some users return after being inactive, this behavior weakens later in the year, so reactivation cannot be relied on to offset rising churn.
 - Because fewer users stay active and fewer return after dropping out, maintaining revenue increasingly depends on keeping existing users from leaving in the first place.
@@ -217,9 +217,8 @@ How much net revenue do users generate in their first 180 days by signup cohort?
 - Report total 180-day revenue per signup cohort and the share of users with LTV greater than zero
 
 #### Key Insights
-- Users who signed up earlier in 2024 generate more revenue in their first 180 days than users who signed up later.
-- Signup cohorts from Q1–Q2 generate the highest 180-day revenue, while cohorts after mid-year generate less.
-- Total 180-day revenue declines for later signup cohorts as the year progresses.
+- Signup cohorts from earlier in 2024 generate more total revenue in their first 180 days than cohorts that joined later in the year.
+- Total 180-day revenue declines for cohorts that sign up after mid-year.
 
 <br>
 
@@ -231,22 +230,28 @@ Which signup sources produce users who generate the most value in their first 18
 </p>
 
 #### Method
-- Restrict users to **2024 signup cohorts**
-- Calculate 180-day post-signup net revenue at the user level
-- Aggregate cohort LTV by **acquisition channel and signup month**
-- Compare early LTV performance across paid, organic, referral, and partner channels
+- Start from all users and their signup date and acquisition channel.
+- Join transactions to users so users with no transactions are still included.
+- Count transaction revenue only if it happens within 180 days after signup.
+- Treat refunds as negative revenue.
+- Sum 180-day revenue at the user level.
+- Aggregate results by signup month and acquisition channel, reporting cohort size and total 180-day revenue.
+- The report is filtered to show only 2024 signup cohorts in Tableau; the SQL itself is not restricted to 2024.
 
 #### Key Insights
 - Users acquired through employer partnerships generate the highest revenue within their first 180 days.
-- Referral users also perform strongly, generating more value than organic and paid users.
-- Organic users generate moderate value, but their revenue declines for later signup cohorts.
-- Paid acquisition users generate the lowest early LTV, despite taking longer to activate.
-- The channels bringing in the most users are not the same channels generating the most revenue.
+- Referral users also generate strong early revenue compared to organic and paid users.
+- Organic users generate moderate early revenue, which declines for later signup cohorts.
+- Paid acquisition users generate the lowest 180-day revenue across signup cohorts.
+- Higher user volume by channel does not directly translate into higher early revenue.
 
-#### **Business Implications**
-The data shows a clear gap between acquisition volume and value creation. Employer partnerships and referrals consistently produce higher-value users, while paid acquisition delivers weak early returns despite higher costs and slower activation. This indicates that current acquisition spending is not aligned with where revenue is actually generated.
+<br>
 
-To improve growth efficiency, acquisition efforts should shift toward employer partnerships and referral channels, where users generate more value early in their lifecycle. Rebalancing the acquisition mix toward higher-LTV channels can improve overall economics without increasing total acquisition spend.
+**3.3 - Business Implications** <br>
+- More users stop transacting month to month as the year goes on, and reactivation does not increase enough to compensate, so the active user base naturally shrinks over time.
+- Although some users return after being inactive, this behavior weakens later in the year, so reactivation cannot be relied on to offset rising churn.
+- Because fewer users stay active and fewer return after dropping out, maintaining revenue increasingly depends on keeping existing users from leaving in the first place.
+- Efforts should focus more on preventing users from stopping their activity than on trying to bring them back after they leave.
 
 <br><br>
 
