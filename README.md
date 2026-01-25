@@ -368,7 +368,6 @@ How quickly does each acquisition channel generate enough revenue to repay its u
 - Paid acquisition performs worst: only a small share of users earn back their acquisition cost within 180 days.
 - Looking only at average LTV can be misleading, because some channels earn back costs for many users while others do so for very few.
 
-
 <br><br>
 
 ## 6 - Revenue Concentration & Risk
@@ -391,16 +390,10 @@ Do a small number of users disproportionately influence total revenue outcomes?
 - Compare **user count**, **average revenue per user**, and **total revenue** by bucket
 
 #### Key Insights
-- Revenue is **heavily skewed toward the top user segments**, with the top 20% contributing the majority of net revenue.
-- The **middle 60% of users generate low average revenue**, despite representing the largest share of the user base.
-- Bottom-percentile users contribute **negligible revenue**, indicating limited monetization depth across most users.
-- Business performance is **highly sensitive to the behavior of a small set of high-value users**, increasing revenue volatility risk.
-
-#### **Business Implications**
-- Revenue concentration increases volatility and exposure to top-user churn.
-- Most users contribute limited value, constraining broad-based monetization.
-- Business outcomes depend heavily on retaining a small high-value segment.
-- Protective strategies for power users are critical to revenue stability.
+- A small group of users brings in most of the revenue. The top 20% of users generate more than half of it.
+- Most users sit in the middle and make very little revenue per person, even though they are the largest group.
+- Users at the bottom bring in almost no revenue.
+- Overall revenue depends a lot on what a small number of high-spending users do.
 
 <br>
 
@@ -421,18 +414,19 @@ What share of total revenue is driven by the top X% of users?
 - Plot Pareto curve and benchmark against equal distribution
 
 #### Key Insights
-- The **top 1% of users generate ~14% of total revenue**.
-- The **top 5% generate ~43%**, and the **top 10% generate ~63%** of revenue.
-- The **top 20% of users account for ~85% of total revenue**, confirming a strong Pareto effect.
-- Revenue sustainability depends disproportionately on a **small fraction of power users**, creating concentration and churn risk at the top end.
-
-#### **Business Implications**
-- A strong Pareto effect confirms dependence on a small fraction of users.
-- Losing a small number of top users can materially impact revenue.
-- Growth strategies must balance power-user retention with broader monetization.
-- Reducing concentration risk improves predictability and long-term resilience.
+- The top 1% of users generate about 14% of total revenue.
+- The top 5% generate about 43%, and the top 10% generate about 63% of total revenue.
+- The top 20% of users generate about 85% of total revenue, showing that revenue is highly concentrated.
+- Overall revenue depends heavily on a small group of high-spending users.
 
 <br>
+
+**6.3 - Business Implications** <br>
+- A small group of users brings in most of the revenue, so changes in their spending can quickly change total revenue and should be monitored closely.
+- Most users generate little revenue per person, so increasing user count alone does not guarantee higher revenue and should be evaluated based on revenue impact.
+- Because revenue depends heavily on a few high-spending users, the business needs to understand how stable these users are over time and what signals appear before their spending drops.
+
+<br><br>
 
 ## 7 - Executive Recommendations & Strategic Focus
 <br>
