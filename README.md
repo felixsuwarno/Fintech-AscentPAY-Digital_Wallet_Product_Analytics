@@ -324,24 +324,19 @@ Do customers generate enough lifetime value within 180 days to cover their acqui
 </p>
 
 #### Method
-- Calculate **180-day LTV** per user by acquisition channel
-- Aggregate **customer acquisition cost (CAC)** by channel
-- Compute **LTV-to-CAC ratio** as:  
-  180-day LTV ÷ CAC
-- Ratios above **100%** indicate channels that fully recover acquisition cost within 180 days
+- Calculate each user’s net revenue within 180 days of signup
+- Aggregate 180-day LTV by acquisition channel
+- Assign customer acquisition cost (CAC) to users based on acquisition channel and signup date
+- Aggregate CAC by acquisition channel, excluding users without a matching CAC record
+- Compute the channel-level LTV-to-CAC ratio as aggregated 180-day LTV divided by aggregated CAC
+- Ratios above 100% indicate that, on average, the channel recovers acquisition cost within 180 days
 
 #### Key Insights
-- **Referral users fully recover CAC (≈106%)**, making this the most efficient channel.
-- **Employer partnerships perform well (≈74%)**, but do not fully pay back within 180 days.
-- **Paid ads are highly inefficient (≈12%)**, failing to recover even a fraction of CAC.
-- Organic acquisition delivers scale but lacks direct CAC attribution in this comparison.
-- Overall, growth efficiency is **constrained by over-reliance on paid acquisition**.
-
-#### **Business Implications**
-- Referral acquisition is capital-efficient and self-sustaining.
-- Employer partnerships are promising but require longer payback horizons.
-- Paid acquisition destroys value at current performance levels.
-- Scaling paid channels without structural improvement increases burn without growth.
+- Referral users fully recover acquisition cost within 180 days (≈106%), making this the most efficient channel in this comparison.
+- Employer partnerships recover a large share of CAC (≈74%) but do not fully pay back within 180 days.
+- Paid ads recover only a small portion of CAC within 180 days (≈12%).
+- Organic acquisition is excluded from the LTV-to-CAC comparison due to missing CAC attribution.
+- Large differences in LTV-to-CAC ratios highlight wide variation in acquisition efficiency across channels.
 
 <br>
 
@@ -353,23 +348,26 @@ How quickly does each acquisition channel generate enough revenue to repay its u
 </p>
 
 #### Method
-- Track cumulative net revenue per user over time
-- Measure **average days required to reach CAC breakeven**
-- Calculate **percentage of users who repay CAC within 180 days**
-- Report metrics by acquisition channel
+- Calculate cumulative net revenue per user after signup
+- Compare cumulative revenue to assigned CAC at fixed time windows (30, 60, 90, and 180 days)
+- Determine whether each user has recovered CAC by each time window
+- Calculate the share of users who recover CAC by each time window
+- Report results by acquisition channel
 
 #### Key Insights
-- **Referral users repay CAC fastest (~78 days)** and at the highest completion rate (~31%).
-- **Employer partner users repay more slowly (~86 days)** with moderate recovery rates (~24%).
-- **Paid ads have extremely long payback (~121 days)** with almost no users recovering CAC (~3%).
-- Many paid users **never repay CAC**, even after 180 days.
-- This creates sustained capital drag and limits scalable growth.
+- Referral users have the highest share of CAC recovery by 180 days (≈31%).
+- Employer partner users recover CAC less often than referrals, with a moderate recovery rate by 180 days (≈24%).
+- Paid ads have the lowest CAC recovery, with only a small share of users recovering CAC by 180 days (≈3%).
+- Most users acquired through paid ads do not recover CAC within 180 days.
 
-#### **Business Implications**
-- Fast payback channels enable reinvestment and compounding growth.
-- Paid ads tie up capital for long periods with minimal recovery.
-- Long payback windows increase risk during demand slowdowns.
-- Payback speed should be a gating metric for acquisition scaling.
+<br>
+
+**5.3 - Business Implications** <br>
+- Referral is the only channel that recovers acquisition cost within 180 days and has the highest share of users repaying CAC.
+- Employer partnerships recover a meaningful portion of CAC but do not fully pay back within 180 days for most users.
+- Paid acquisition performs poorly on both LTV/CAC and CAC recovery probability, with very few users repaying acquisition cost within 180 days.
+- Channel efficiency differs not only in average LTV/CAC but also in how many users actually repay CAC, meaning averages alone can hide risk.
+
 
 <br><br>
 
