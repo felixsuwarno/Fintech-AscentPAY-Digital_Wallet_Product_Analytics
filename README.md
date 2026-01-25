@@ -10,17 +10,20 @@ The analysis examines how users start using the product, whether they keep using
 <br>
 
 ➤ **Project Goal / Purpose:**  
+
 Understand whether AscentPAY’s revenue comes from broad, healthy usage across many users or from a small group of high-value users, and evaluate long-term sustainability through activation speed, retention, customer value (LTV), and acquisition cost payback.
 
 <br>
 
 ➤ **Skills Demonstrated:**  
+
 Product analytics and KPI design, activation and engagement analysis, retention and reactivation analysis, cohort-based LTV modeling, monetization and revenue analysis, CAC efficiency and payback analysis, revenue concentration and Pareto analysis
 (SQL • Python • Pandas • FinTech metrics • executive-ready analysis)
 
 <br>
 
 ➤ **Core Business Questions:**
+
 - How long does it take users to complete their first revenue-generating transaction after signup?
 - Do users keep transacting month after month, or do they drop off?
 - When users churn, do they come back and continue using the product?
@@ -38,8 +41,10 @@ Without improvements in retention and revenue stability, scaling user growth inc
 
 <br><br>
 
-# ➤ The Main Report : 
 ---
+
+# ➤ The Main Report : 
+
 
 <br>
 
