@@ -1,47 +1,40 @@
 # FinTech “AscentPAY” Digital Wallet Product Analytics  
 **Activation • Retention • LTV • Revenue Concentration**
 
-This project analyzes synthetic but realistic digital wallet data from AscentPAY, a simulated FinTech product designed to mirror real-world payment apps that monetize via net transaction revenue. 
+This project analyzes synthetic but realistic digital wallet data from AscentPAY, a simulated FinTech product designed to resemble real-world payment apps that earn money from transaction fees.
 
-The dataset includes tens of thousands of users, hundreds of thousands of transactions, and multiple supporting tables (users, transactions, events, and acquisition costs). 
+The dataset includes tens of thousands of users, hundreds of thousands of transactions, and multiple supporting tables (users, transactions, events, and acquisition costs).
 
-The analysis evaluates user activation, retention, reactivation, customer value (LTV), unit economics, and revenue concentration using defensible, business-aligned metrics to assess overall product health and sustainability.
+The analysis examines how users start using the product, whether they keep using it, how much revenue they generate over time, and how concentrated that revenue is. The goal is to assess overall product health and long-term revenue stability using clear, business-aligned metrics.
 
 <br>
 
 ➤ **Project Goal / Purpose:**  
-Evaluate whether AscentPAY’s revenue is driven by broad healthy usage or a small set of high-value users, and quantify sustainability via activation, retention, LTV, and CAC payback.
+Understand whether AscentPAY’s revenue comes from broad, healthy usage across many users or from a small group of high-value users, and evaluate long-term sustainability through activation speed, retention, customer value (LTV), and acquisition cost payback.
 
 <br>
 
 ➤ **Skills Demonstrated:**  
-Activation & engagement analytics, retention and reactivation analysis, cohort LTV modeling, monetization and revenue stack analysis, CAC efficiency and payback analysis, revenue concentration and Pareto analysis.
-(SQL • Python • Pandas • fintech KPI design • executive storytelling )
+Product analytics and KPI design, activation and engagement analysis, retention and reactivation analysis, cohort-based LTV modeling, monetization and revenue analysis, CAC efficiency and payback analysis, revenue concentration and Pareto analysis
+(SQL • Python • Pandas • FinTech metrics • executive-ready analysis)
 
 <br>
 
 ➤ **Core Business Questions:**
 - How long does it take users to complete their first revenue-generating transaction after signup?
-- Do users return and transact consistently month-over-month?
-- Is churn permanent, or can users be reactivated?
-- Who actually generates revenue, and how concentrated is that value?
+- Do users keep transacting month after month, or do they drop off?
+- When users churn, do they come back and continue using the product?
+- Which users actually generate revenue, and how concentrated is that revenue?
 - Do users generate enough lifetime value to justify their acquisition cost?
-- How fragile is revenue if the top revenue-contributing users churn (revenue concentration risk)?
+- How fragile is revenue if high-spending users stop using the product?
 
 <br>
 
-➤ **Key Findings:**
-( FOR LATER )
+➤ **Executive Summary:**  
 
-<br>
-
-➤ **Core Issue Identified:**
-( FOR LATER )
-
-<br>
-
-➤ **Executive Outcome:**  
-( FOR LATER )
+Across the full analysis, AscentPAY shows strong early activation but weakening retention over time. 
+Revenue is highly concentrated among a small group of users, and paid acquisition performs poorly on early value and cost recovery.
+Without improvements in retention and revenue stability, scaling user growth increases risk rather than long-term revenue.
 
 <br><br>
 
