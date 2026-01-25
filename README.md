@@ -299,20 +299,18 @@ Which transaction channel contribute most to revenue, and how their contribution
 - Restrict the analysis to calendar year 2024 (in SQL).
 
 #### Key Insights
-- Bill pay and card payments drive most of the 2024 net revenue across months.
-- Withdrawals contribute meaningfully but remain a secondary revenue source.
-- The revenue mix across transaction types stays fairly stable over the year.
-- No single transaction type becomes a breakout driver of revenue growth.
-- Take rates are fairly similar across types, with card payments slightly higher than bill pay and withdrawals.
+- Bill pay and card payments generate most of the net revenue throughout the year.
+- Withdrawals contribute a smaller share of net revenue compared to bill pay and card payments.
+- The share of revenue by transaction type stays similar month to month.
+- No transaction type shows a sharp increase or decrease relative to the others
 
 <br>
 
 **4.3 - Business Implications** <br>
-- Take rate stays stable month to month, and net revenue rises and falls mainly with GMV, so revenue growth depends more on increasing usage volume than on higher fees.
-- Bill pay and card payments drive most of the revenue, and withdrawals remain secondary, so improving the performance of bill pay and card payments will move total revenue more than pushing smaller transaction types.
-- The revenue mix by transaction type stays stable with no breakout type, so there is no single “new” transaction type currently lifting monetization on its own.
-- When overall activity slows, revenue drops with it and the mix does not change enough to offset the decline, so the business needs growth in total transactions (or GMV) to prevent revenue from falling.
-- With take rate not expanding and no transaction type suddenly accelerating, revenue improvement requires either more usage across the main transaction types or a deliberate change to pricing/fees (which is not happening in the current data).
+- Pricing and fees do not change over time, so revenue decreases when usage decreases and increases when usage increases.
+- Bill pay and card payments generate most of the revenue, so changes in these two activities have the largest effect on total revenue.
+- No transaction type grows faster than the others, so there is no transaction type that compensates when another one slows down.
+- Overall, revenue closely follows how much users transact.
 
 <br><br>
 
