@@ -1,4 +1,4 @@
-# WIP ( Jan 20 2026 )
+# WIP ( Jan 24 2026 )
 
 # FinTech “AscentPAY” Digital Wallet Product Analytics  
 **Activation • Retention • LTV • Revenue Concentration**
@@ -307,10 +307,10 @@ Which transaction channel contribute most to revenue, and how their contribution
 <br>
 
 **4.3 - Business Implications** <br>
-- Pricing and fees do not change over time, so revenue decreases when usage decreases and increases when usage increases.
-- Bill pay and card payments generate most of the revenue, so changes in these two activities have the largest effect on total revenue.
-- No transaction type grows faster than the others, so there is no transaction type that compensates when another one slows down.
-- Overall, revenue closely follows how much users transact.
+- Fees do not change over time, so when people use the product less, revenue drops and nothing in pricing makes up for it.
+- Most revenue comes from bill pay and card payments, so revenue goes up or down mainly based on how much these two features are used.
+- No transaction type grows enough to make up for slowdowns in others, so revenue does not shift to a stronger source when activity falls.
+- Overall, revenue rises and falls with how much users transact, making it sensitive to changes in user's spending.
 
 <br><br>
 
