@@ -1,5 +1,3 @@
-# WIP ( Jan 24 2026 )
-
 # FinTech “AscentPAY” Digital Wallet Product Analytics  
 **Activation • Retention • LTV • Revenue Concentration**
 
@@ -431,34 +429,22 @@ What share of total revenue is driven by the top X% of users?
 ## 7 - Executive Recommendations & Strategic Focus
 <br>
 
-Based on the data, AscentPAY’s main problem is that revenue does not last over time and depends too much on a small group of users. The recommendations below focus on the changes that would have the biggest impact on the business.
+Based on the data, AscentPAY faces two connected challenges: revenue weakens over time, and a large share of revenue depends on a small group of users. The points below highlight where the data shows the greatest risk and where focus would have the largest impact.
 
-**1. Rebalance Growth Away from Paid Acquisition**
+**1. Re-evaluate Paid Acquisition**
+Users acquired through paid ads activate more slowly, generate the lowest early revenue, and rarely recover acquisition cost within 180 days. Under current performance, paid acquisition contributes weak short-term economics compared with referral and employer partnership channels.
 
-- Users acquired through paid ads take the longest to activate, generate the lowest early value, and rarely recover their acquisition cost. As a result, scaling paid acquisition under current conditions increases churn and wastes capital.
-- Growth effort should shift toward referral and employer partnership channels, which consistently produce higher-value users.
-
-**2. Treat Retention as the Main Growth Problem**
-
-- Users activate quickly, but many stop using the product after a few months.
-- Too many users leave each month, which makes revenue unstable.
-- Improving the experience after the first transaction is more effective than acquiring more users.
+**2. Retention Is the Primary Pressure Point**
+Users reach their first transaction quickly, but many stop transacting month to month. Retention declines later in the year, and revenue falls with it, indicating that keeping users active over time matters more than increasing signups.
 
 **3. Protect and Focus on High-Value Users**
-
-- Most revenue comes from a small group of users.
-- Losing these users would significantly reduce revenue.
-- Retention efforts should focus on keeping these high-value users active.
+A small share of users generates most of the revenue. Changes in the behavior of these users have an outsized impact on total revenue, making their stability important to overall performance.
 
 **4. Do Not Rely on Reactivation as a Growth Strategy**
-- Some users return after leaving, but most do not stay active for long.
-- Many users use the product only when they need it, not regularly.
-- It is better to keep users from leaving than to try to bring them back.
+Some inactive users return, but reactivation weakens later in the year and does not offset ongoing churn. Reactivation alone is not sufficient to stabilize revenue.
 
 **5. Keep Pricing Stable and Increase Usage**
-- Prices and fees are already stable and working as expected.
-- Revenue grows mainly when users make more transactions.
-- The product should focus on getting users to use it more often, not on changing prices.
+To grow more reliably, AscentPAY needs to improve how long users stay active, use acquisition spend carefully, and reduce dependence on a small set of high-value users. Without progress on retention and revenue concentration, adding more users increases risk rather than long-term stability.
 
 **Strategic Focus Going Forward**
 To grow in a healthy way, AscentPAY should focus on keeping users active, spending acquisition budget more carefully, and reducing dependence on a small group of users. Without fixing churn and revenue concentration, adding more users will increase risk instead of long-term growth.
