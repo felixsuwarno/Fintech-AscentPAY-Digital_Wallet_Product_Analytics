@@ -1,0 +1,51 @@
+/* user_behavior: Aggregate 2024 transactions to the user level to compute each user's total net revenue (excluding refunds). */
+WITH user_behavior AS 
+(
+  SELECT
+    user_id,
+    SUM(COALESCE(revenue_to_app_usd, 0)) AS total_net_revenue
+  FROM transactions
+  WHERE is_refund = FALSE
+    AND tx_ts >= DATE '2024-01-01'
+    AND tx_ts <  DATE '2025-01-01'
+  GROUP BY user_id
+),
+
+/* percentiles: Rank users by total net revenue and assign each user to a revenue percentile bucket (1–100) using NTILE. */
+percentiles AS 
+(
+  SELECT
+    user_id,
+    total_net_revenue,
+    NTILE(100) OVER (ORDER BY total_net_revenue) AS revenue_percentile
+  FROM user_behavior
+),
+
+/* high_low_outlier: Map each user into mutually exclusive bottom/top percentile bands (1/5/10/20%) or the middle 60% for comparison. */
+high_low_outlier AS
+(
+  SELECT
+    user_id,
+    total_net_revenue,
+    CASE
+      WHEN revenue_percentile <= 1  THEN '9_lower_01_percent'
+      WHEN revenue_percentile <= 5  THEN '8_lower_05_percent'
+      WHEN revenue_percentile <= 10 THEN '7_lower_10_percent'
+      WHEN revenue_percentile <= 20 THEN '6_lower_20_percent'
+      WHEN revenue_percentile >= 99 THEN '1_upper_01_percent'
+      WHEN revenue_percentile >= 95 THEN '2_upper_05_percent'
+      WHEN revenue_percentile >= 90 THEN '3_upper_10_percent'
+      WHEN revenue_percentile >= 80 THEN '4_upper_20_percent'
+      ELSE '5_middle_60_percent'
+    END AS behavior_flag
+  FROM percentiles
+)
+
+SELECT
+  behavior_flag,
+  COUNT(*) AS users,
+  ROUND(SUM(total_net_revenue), 2) AS total_net_revenue_usd,
+  ROUND(AVG(total_net_revenue), 2) AS avg_net_revenue_per_user
+FROM high_low_outlier
+GROUP BY behavior_flag
+ORDER BY behavior_flag;

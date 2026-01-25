@@ -1,0 +1,117 @@
+WITH user_cac AS
+(
+  SELECT 
+    user_id,
+    signup_ts,
+    signup_ts::date AS signup_date,
+    acquisition_channel,
+    COALESCE(cac_usd, 0) AS cac_usd
+  FROM
+  (
+    SELECT
+      u.user_id,
+      u.signup_ts,
+      u.acquisition_channel,
+      ac.cost_value_usd AS cac_usd,
+      ROW_NUMBER() OVER
+      (
+        PARTITION BY u.user_id
+        ORDER BY ac.start_date DESC
+      ) AS rn
+    FROM users u
+    LEFT JOIN acquisition_costs ac
+      ON  u.acquisition_channel = ac.channel
+      AND u.signup_ts::date BETWEEN ac.start_date AND ac.end_date
+    WHERE u.signup_ts >= '2024-01-01'::date
+      AND u.signup_ts <  '2025-01-01'::date
+  ) x
+  WHERE rn = 1 OR rn IS NULL
+),
+
+user_tx_running AS
+(
+  SELECT 
+    uc.user_id,
+    uc.cac_usd,
+    uc.signup_date,
+    uc.acquisition_channel,
+    t.tx_id,
+    CAST(t.tx_ts AS DATE) AS tx_date,
+
+    SUM
+    (
+      CASE
+        WHEN t.is_refund = true
+          THEN -1 * COALESCE(t.revenue_to_app_usd, 0)
+        ELSE COALESCE(t.revenue_to_app_usd, 0)
+      END
+    ) 
+    OVER
+    (
+      PARTITION BY uc.user_id
+      ORDER BY t.tx_ts, t.tx_id
+      ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS cumulative_revenue_usd
+
+  FROM user_cac uc
+  LEFT JOIN transactions t
+    ON uc.user_id = t.user_id
+   AND t.tx_ts IS NOT NULL
+   AND CAST(t.tx_ts AS DATE) >= uc.signup_date
+),
+
+payback_date AS
+(
+  SELECT
+    user_id,
+    MIN(tx_date) AS payback_date
+  FROM user_tx_running
+  WHERE cac_usd > 0
+    AND cumulative_revenue_usd >= cac_usd
+  GROUP BY user_id
+),
+
+user_payback_metrics AS
+(
+  SELECT
+    uc.user_id,
+    uc.acquisition_channel,
+    (pd.payback_date - uc.signup_date) AS payback_days
+  FROM user_cac uc
+  LEFT JOIN payback_date pd
+    ON uc.user_id = pd.user_id
+)
+
+SELECT
+  acquisition_channel,
+  COUNT(*) AS users,
+
+  ROUND
+  (
+    AVG
+    (
+      CASE 
+        WHEN acquisition_channel = 'organic' THEN NULL
+        WHEN payback_days IS NOT NULL AND payback_days <= 180 THEN 1.0
+        ELSE 0.0
+      END
+    ),
+    2
+  ) AS pct_paid_back_180,
+
+  ROUND
+  (
+    AVG
+    (
+      CASE 
+        WHEN acquisition_channel = 'organic' THEN NULL
+        WHEN payback_days IS NOT NULL THEN 1.0 * payback_days
+        ELSE NULL
+      END
+    ),
+    2
+  ) AS avg_payback_days
+
+FROM user_payback_metrics
+GROUP BY acquisition_channel
+ORDER BY pct_paid_back_180 DESC;

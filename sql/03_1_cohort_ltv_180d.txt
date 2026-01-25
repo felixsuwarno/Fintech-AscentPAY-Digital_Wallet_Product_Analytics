@@ -1,0 +1,76 @@
+WITH main_users AS 
+(
+    SELECT
+        user_id,
+        signup_ts
+    FROM users
+),
+
+main_table AS 
+(
+    SELECT
+        mu.user_id,
+        mu.signup_ts,
+        t.tx_ts,
+        t.is_refund,
+        t.revenue_to_app_usd
+    FROM main_users mu
+    LEFT JOIN transactions t
+      ON mu.user_id = t.user_id
+),
+
+-- collect every real user's transaction  within 180 days after signing up
+-- put this in column called rev_180d
+scored AS 
+(
+    SELECT
+        user_id,
+        DATE_TRUNC('month', signup_ts)::date AS signup_month,
+	CASE
+    		WHEN tx_ts >= signup_ts AND tx_ts <  signup_ts + INTERVAL '180 days'
+    		THEN
+        		CASE
+            			WHEN is_refund = true
+                		THEN -1 * COALESCE(revenue_to_app_usd, 0)
+            			ELSE
+                		COALESCE(revenue_to_app_usd, 0)
+        		END
+    		ELSE 0
+	END AS rev_180d
+    FROM main_table
+),
+
+user_ltv AS
+(
+	SELECT user_id, signup_month, SUM(rev_180d) AS user_LTV_180d
+	FROM scored
+	GROUP BY user_id, signup_month
+	ORDER BY signup_month ASC, user_id ASC
+)
+
+
+SELECT 
+	signup_month, 
+	
+	COUNT(user_id) AS total_cohort_users,
+	
+	SUM(user_ltv_180d) AS total_ltv_180d,
+	
+	ROUND(AVG(user_ltv_180d),2) AS avg_ltv_180d_usd,
+	
+	-- % of users with LTV > 0 in first 180 days
+	-- The percentage of users in a signup-month cohort who made the company 
+	-- any money within their first 180 days.
+    ROUND
+	(
+        AVG(CASE WHEN user_ltv_180d > 0 THEN 1.0 ELSE 0.0 END),
+        2
+    ) AS pct_monetized_180d
+	
+FROM user_ltv
+GROUP BY signup_month
+ORDER BY signup_month
+
+
+
+

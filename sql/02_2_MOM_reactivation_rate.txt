@@ -1,0 +1,132 @@
+--  find all users who have transactions ( activity that generates profit or AscentPAY )
+WITH monthly_transacting_users AS 
+(
+    SELECT DISTINCT
+        user_id,
+        DATE_TRUNC('month', tx_ts)::date AS year_month
+    FROM transactions
+    WHERE tx_ts >= '2024-01-01'
+      AND tx_ts <  '2025-01-01'
+),
+
+-- create a helper column called prev_month
+month_pairs AS 
+(
+    SELECT
+        user_id,
+        year_month,
+        (year_month - INTERVAL '1 month')::date AS prev_month
+    FROM monthly_transacting_users
+),
+
+-- IMPORTANT!!! TRICKY!!!
+-- find rows which has the same year_month and prev_month,
+-- meaning they are active in two consecutive months,
+-- and flag them with is_retained = 1
+retention_flags AS
+(
+    SELECT
+        cur.user_id AS cur_user_id,
+        prev.user_id AS prev_user_id,
+        cur.year_month AS cur_year_month,
+        cur.prev_month AS cur_prev_month,
+        prev.year_month AS prev_year_month,
+        CASE
+            WHEN prev.user_id IS NOT NULL THEN 1
+            ELSE 0
+        END AS is_retained
+    FROM month_pairs cur
+    LEFT JOIN month_pairs prev
+        ON cur.user_id = prev.user_id
+       AND cur.prev_month = prev.year_month
+),
+
+-- count how many retained users exist in each month
+monthly_retained_user_counts AS
+(
+    SELECT
+        cur_year_month AS year_month,
+        COUNT(DISTINCT cur_user_id) AS retained_users
+    FROM retention_flags
+    WHERE is_retained = 1
+    GROUP BY cur_year_month
+),
+
+-- count how many unique transacting users exist in each month (this will be used as the "current month users" later)
+monthly_transacting_user_counts AS
+(
+    SELECT
+        year_month,
+        COUNT(DISTINCT user_id) AS monthly_transacting_users
+    FROM monthly_transacting_users
+    GROUP BY year_month
+),
+
+-- combine current month users + retained users to compute reactivated users
+monthly_reactivated_user_counts AS
+(
+    SELECT
+        mtc.year_month,
+        mtc.monthly_transacting_users AS cur_month_users,
+        COALESCE(mrc.retained_users, 0) AS retained_users,
+        (mtc.monthly_transacting_users - COALESCE(mrc.retained_users, 0)) AS reactivated_users
+    FROM monthly_transacting_user_counts mtc
+    LEFT JOIN monthly_retained_user_counts mrc
+        ON mtc.year_month = mrc.year_month
+),
+
+-- count total number of distinct transacting users in 2024 (this is the universe)
+total_transacting_users_2024 AS
+(
+    SELECT
+        COUNT(DISTINCT user_id) AS total_users
+    FROM monthly_transacting_users
+),
+
+-- attach previous month user counts to each month (needed for the denominator)
+monthly_prev_month_user_counts AS
+(
+    SELECT
+        mru.year_month,
+        mtc_prev.monthly_transacting_users AS prev_month_users
+    FROM monthly_reactivated_user_counts mru
+    LEFT JOIN monthly_transacting_user_counts mtc_prev
+        ON mtc_prev.year_month = (mru.year_month - INTERVAL '1 month')::date
+),
+
+-- build the final table that contains every column needed to compute MoM reactivation rate
+mom_reactivation_rate_table AS
+(
+    SELECT
+        mru.year_month,
+        mru.cur_month_users,
+        pm.prev_month_users,		
+        mru.retained_users,
+        mru.reactivated_users,
+        tot.total_users,
+        (tot.total_users - pm.prev_month_users) AS inactive_prev_month_users
+    FROM monthly_reactivated_user_counts mru
+    LEFT JOIN monthly_prev_month_user_counts pm
+        ON mru.year_month = pm.year_month
+    CROSS JOIN total_transacting_users_2024 tot
+)
+
+SELECT
+    	year_month,
+	cur_month_users,
+	prev_month_users,
+	retained_users,
+	reactivated_users,
+	total_users,
+	inactive_prev_month_users,
+	
+    ROUND
+	(
+        reactivated_users * 1.0
+        / 
+		NULLIF(inactive_prev_month_users, 0)
+    	, 4
+	) AS mom_reactivation_rate
+
+FROM mom_reactivation_rate_table
+ORDER BY year_month;

@@ -1,0 +1,68 @@
+WITH main_users AS 
+(
+    SELECT
+        user_id,
+        signup_ts,
+        acquisition_channel
+    FROM users
+),
+
+main_table AS 
+(
+    SELECT
+        mu.user_id,
+        mu.signup_ts,
+        mu.acquisition_channel,
+        t.tx_ts,
+        t.is_refund,
+        t.revenue_to_app_usd
+    FROM main_users mu
+    LEFT JOIN transactions t
+      ON mu.user_id = t.user_id
+),
+
+scored AS 
+(
+    SELECT
+        user_id,
+        DATE_TRUNC('month', signup_ts)::date AS signup_month,
+        acquisition_channel,
+        CASE
+            WHEN tx_ts >= signup_ts AND tx_ts < signup_ts + INTERVAL '180 days'
+            THEN
+                CASE
+                    WHEN is_refund = true
+                        THEN -1 * COALESCE(revenue_to_app_usd, 0)
+                    ELSE COALESCE(revenue_to_app_usd, 0)
+                END
+            ELSE 0
+        END AS rev_180d
+    FROM main_table
+),
+
+user_ltv AS
+(
+    SELECT
+        user_id,
+        signup_month,
+        acquisition_channel,
+        SUM(rev_180d) AS user_ltv_180d
+    FROM scored
+    GROUP BY
+        user_id,
+        signup_month,
+        acquisition_channel
+)
+
+SELECT 
+    signup_month,
+    acquisition_channel,
+    COUNT(*) AS cohort_users,
+    ROUND(SUM(user_ltv_180d), 2) AS total_ltv_180d_usd
+FROM user_ltv
+GROUP BY
+    signup_month,
+    acquisition_channel
+ORDER BY
+    signup_month,
+    acquisition_channel;

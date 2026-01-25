@@ -1,0 +1,26 @@
+WITH user_trans_timedelta AS (
+    SELECT
+        u.user_id,
+        u.acquisition_channel,
+        u.signup_ts::timestamp AS signup_ts,
+        MIN(t.tx_ts::timestamp) AS first_tx
+    FROM users u
+    JOIN transactions t
+        ON u.user_id = t.user_id
+    WHERE u.signup_ts >= DATE '2024-01-01'
+      AND u.signup_ts <  DATE '2025-01-01'
+    GROUP BY
+        u.user_id,
+        u.acquisition_channel,
+        u.signup_ts
+)
+SELECT
+    acquisition_channel,
+    ROUND(
+        AVG(
+            EXTRACT(EPOCH FROM (first_tx - signup_ts))
+        ) / 86400.0
+    , 2) AS avg_activation_days
+FROM user_trans_timedelta
+GROUP BY acquisition_channel
+ORDER BY acquisition_channel;

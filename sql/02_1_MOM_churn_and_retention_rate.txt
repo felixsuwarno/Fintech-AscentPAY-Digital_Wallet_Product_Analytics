@@ -1,0 +1,117 @@
+WITH activity AS 
+(
+  -- transaction activity only (value-generating behavior)
+  SELECT
+    user_id,
+    tx_ts AS activity_ts,
+    'transaction' AS activity_type
+  FROM transactions
+),
+
+user_month AS 
+(
+  SELECT
+    user_id,
+    DATE_TRUNC('month', activity_ts)::date AS year_month,
+    activity_type,
+    ROW_NUMBER() OVER (
+      PARTITION BY user_id
+      ORDER BY activity_ts
+    ) AS activity_sequence
+  FROM activity
+),
+
+-- BASE TABLE to be used for advanced calculations
+user_month_active AS 
+(
+  SELECT
+    user_id,
+    year_month
+  FROM user_month
+  GROUP BY user_id, year_month
+),
+
+-- filter to get only all transactions who has adjacent previous month transaction.
+retained_user_months AS 
+(
+  SELECT
+    cur.user_id,
+    cur.year_month
+  FROM user_month_active cur
+  
+  -- self join, with a catch : the self join is used in such a way that it prunes all records
+  -- that has no adjacent previous year_month
+  -- so, the resulting table is all rows of data with guaranteed previous month record.
+  JOIN user_month_active prev
+    ON prev.user_id = cur.user_id
+   AND prev.year_month = (cur.year_month - INTERVAL '1 month')::date
+),
+
+-- count how many users there are this month who were also active the previous month
+retained_users_by_month AS 
+(
+  SELECT
+    year_month,
+    COUNT(DISTINCT user_id) AS retained_users
+  FROM retained_user_months
+  GROUP BY year_month
+),
+
+-- count how many active users there are in total on each month 
+all_active_users_by_month AS
+(
+  SELECT
+    year_month,
+    COUNT(DISTINCT user_id) AS active_users
+  FROM user_month_active
+  WHERE year_month >= DATE '2024-01-01'
+    AND year_month <  DATE '2025-01-01'
+  GROUP BY year_month
+),
+
+-- final summary table for MoM churn (adds current-month actives + retention rate)
+mom_churn_summary_by_month AS
+(
+  SELECT
+    cur.year_month,
+	
+    cur.active_users AS active_users_current_month,
+	
+    prev.active_users AS active_users_prev_month,
+	
+    COALESCE(ret.retained_users, 0) AS retained_users,
+	
+    (prev.active_users - COALESCE(ret.retained_users, 0)) AS churned_users,
+
+	-- Churn Rate - “Of the users who were active last month, what percentage did NOT come back this month?”
+    ROUND
+	(
+      	(prev.active_users - COALESCE(ret.retained_users, 0))::numeric
+		/ 
+		NULLIF(prev.active_users, 0)
+		,2
+    ) AS mom_churn_rate,
+
+	-- Retention rate - “Of the users who were active last month, what percentage came back this month?”
+	ROUND
+	(
+      COALESCE(ret.retained_users, 0)::numeric
+      / 
+	  NULLIF(prev.active_users, 0)
+	  ,2
+    ) AS mom_retention_rate
+	
+  FROM all_active_users_by_month cur
+
+  -- align previous month active users to current month
+  JOIN all_active_users_by_month prev
+    ON prev.year_month = (cur.year_month - INTERVAL '1 month')::date
+
+  -- retained_users are already labeled by the current month
+  LEFT JOIN retained_users_by_month ret
+    ON ret.year_month = cur.year_month
+)
+
+SELECT *
+FROM mom_churn_summary_by_month
+ORDER BY year_month;

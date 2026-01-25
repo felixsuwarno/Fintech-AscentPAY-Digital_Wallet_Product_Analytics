@@ -1,0 +1,69 @@
+WITH daily_activity AS
+(
+    SELECT  user_id,
+            DATE_TRUNC('day', tx_ts)::date AS activity_date
+    FROM    transactions
+
+    UNION ALL
+
+    SELECT  user_id,
+            DATE_TRUNC('day', event_ts)::date AS activity_date
+    FROM    events
+),
+
+dau_by_day AS
+(
+    SELECT  activity_date,
+            DATE_TRUNC('month', activity_date)::date AS year_month,
+            COUNT(DISTINCT user_id) AS dau
+    FROM    daily_activity
+    WHERE   activity_date >= DATE '2024-01-01'
+        AND activity_date <  DATE '2025-01-01'
+    GROUP BY activity_date
+),
+
+monthly_avg_dau AS
+(
+    SELECT  year_month,
+            ROUND(AVG(dau), 2) AS avg_dau
+    FROM    dau_by_day
+    GROUP BY year_month
+),
+
+monthly_activity AS
+(
+    SELECT  user_id,
+            DATE_TRUNC('month', tx_ts)::date AS year_month
+    FROM    transactions
+
+    UNION ALL
+
+    SELECT  user_id,
+            DATE_TRUNC('month', event_ts)::date AS year_month
+    FROM    events
+),
+
+mau_by_month AS
+(
+    SELECT  year_month,
+            COUNT(DISTINCT user_id) AS mau
+    FROM    monthly_activity
+    WHERE   year_month >= DATE '2024-01-01'
+        AND year_month <  DATE '2025-01-01'
+    GROUP BY year_month
+),
+
+stickiness AS
+(
+    SELECT  m1.year_month,
+            m1.avg_dau,
+            m2.mau,
+            ROUND(m1.avg_dau / NULLIF(m2.mau, 0), 4) AS monthly_stickiness_ratio
+    FROM    monthly_avg_dau m1
+    JOIN    mau_by_month m2
+        ON  m1.year_month = m2.year_month
+)
+
+SELECT  *
+FROM    stickiness
+ORDER BY year_month;

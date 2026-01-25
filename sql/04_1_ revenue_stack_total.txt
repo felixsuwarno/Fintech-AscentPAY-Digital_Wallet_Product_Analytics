@@ -1,0 +1,30 @@
+WITH spend_tx AS 
+(
+  SELECT
+    tx_ts,
+    amount_usd,
+    revenue_to_app_usd
+  FROM transactions
+  WHERE tx_ts IS NOT NULL
+    AND is_refund = FALSE
+
+    -- Spend GMV only ( exclude top up + peer to peer transfers )
+    AND tx_type IN ('card_payment', 'bill_pay', 'fx_payment')
+),
+
+main_table AS (
+  SELECT
+    DATE_TRUNC('month', tx_ts)::date AS month,
+    SUM(COALESCE(amount_usd, 0)) AS gmv_usd,
+    SUM(COALESCE(revenue_to_app_usd, 0)) AS net_revenue_usd
+  FROM spend_tx
+  GROUP BY 1
+)
+
+SELECT
+  month,
+  gmv_usd,
+  net_revenue_usd,
+  ROUND(net_revenue_usd / NULLIF(gmv_usd, 0), 4) AS take_rate
+FROM main_table
+ORDER BY month;

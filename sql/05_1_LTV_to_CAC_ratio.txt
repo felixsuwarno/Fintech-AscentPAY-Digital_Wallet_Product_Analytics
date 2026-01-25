@@ -1,0 +1,65 @@
+WITH user_ltv AS 
+(
+    SELECT
+        u.user_id,
+        u.signup_ts,
+        u.acquisition_channel,
+        SUM
+        (
+            CASE
+                WHEN t.tx_ts >= u.signup_ts
+                 AND t.tx_ts <  u.signup_ts + INTERVAL '180 days'
+                THEN
+                    CASE
+                        WHEN t.is_refund = true
+                        THEN -1 * COALESCE(t.revenue_to_app_usd, 0)
+                        ELSE COALESCE(t.revenue_to_app_usd, 0)
+                    END
+                ELSE 0
+            END
+        ) AS ltv_180d_usd
+    FROM users u
+    LEFT JOIN transactions t
+      ON u.user_id = t.user_id
+    WHERE u.signup_ts::date BETWEEN '2024-01-01' AND '2024-12-31'
+    GROUP BY
+        u.user_id,
+        u.signup_ts,
+        u.acquisition_channel
+),
+
+user_ltv_cac AS
+(
+    SELECT
+        ul.user_id,
+        ul.acquisition_channel,
+        ul.ltv_180d_usd,
+        ac.cost_value_usd AS cac_usd,
+        ROW_NUMBER() OVER 
+        (
+            PARTITION BY ul.user_id
+            ORDER BY ac.start_date DESC
+        ) AS rn
+    FROM user_ltv ul
+    LEFT JOIN acquisition_costs ac
+      ON ul.acquisition_channel = ac.channel
+     AND ul.signup_ts::date BETWEEN ac.start_date AND ac.end_date
+)
+
+SELECT
+    acquisition_channel,
+    COUNT(*) AS users_total,
+    COUNT(cac_usd) AS users_with_cac,
+    ROUND(AVG(ltv_180d_usd), 2) AS avg_ltv_180d_usd,
+    ROUND(AVG(cac_usd) FILTER (WHERE cac_usd IS NOT NULL), 2) AS avg_cac_usd,
+    ROUND(AVG(ltv_180d_usd - cac_usd) FILTER (WHERE cac_usd IS NOT NULL), 2) AS avg_profit_per_user_usd,
+    ROUND
+    (
+        AVG(ltv_180d_usd) FILTER (WHERE cac_usd IS NOT NULL)
+        / NULLIF(AVG(cac_usd) FILTER (WHERE cac_usd IS NOT NULL), 0),
+        2
+    ) AS ltv_to_cac_ratio
+FROM user_ltv_cac
+WHERE rn = 1
+GROUP BY acquisition_channel
+ORDER BY avg_profit_per_user_usd DESC;

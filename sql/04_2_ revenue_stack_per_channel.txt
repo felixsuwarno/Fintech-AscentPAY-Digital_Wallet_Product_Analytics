@@ -1,0 +1,26 @@
+WITH main_table AS 
+(
+    SELECT
+        DATE_TRUNC('month', tx_ts)::date AS month,
+        tx_type,
+        SUM(COALESCE(amount_usd, 0)) AS gmv_usd,
+        SUM(COALESCE(revenue_to_app_usd, 0)) AS net_revenue_usd
+    FROM transactions
+    WHERE tx_ts IS NOT NULL
+      AND tx_ts >= DATE '2024-01-01'
+      AND tx_ts <  DATE '2025-01-01'
+      AND is_refund = FALSE
+
+      -- Monetization GMV rule: exclude top up + peer to peer transfers
+      AND tx_type NOT IN ('topup', 'p2p_send')
+    GROUP BY 1, 2
+)
+
+SELECT
+    month,
+    tx_type,
+    gmv_usd,
+    net_revenue_usd,
+    ROUND(net_revenue_usd / NULLIF(gmv_usd, 0), 4) AS take_rate
+FROM main_table
+ORDER BY month, tx_type;
