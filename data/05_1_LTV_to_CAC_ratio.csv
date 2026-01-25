@@ -1,0 +1,5 @@
+acquisition_channel,users_total,users_with_cac,avg_ltv_180d_usd,avg_cac_usd,avg_profit_per_user_usd,ltv_to_cac_ratio
+organic,10674,10674,13.48,0.00,13.48,NULL
+referral,5337,5337,21.02,19.89,1.13,1.06
+employer_partner,4003,4003,31.04,42.06,-11.02,0.74
+paid_ads,6671,6671,6.51,52.52,-46.00,0.12

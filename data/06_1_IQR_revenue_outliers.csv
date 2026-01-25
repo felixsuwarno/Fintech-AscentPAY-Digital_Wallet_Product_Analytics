@@ -1,0 +1,10 @@
+behavior_flag,users,total_net_revenue_usd,avg_net_revenue_per_user
+1_upper_01_percent,186,40229.81,216.29
+2_upper_05_percent,372,53567.07,144.00
+3_upper_10_percent,465,44791.45,96.33
+4_upper_20_percent,930,59853.49,64.36
+5_middle_60_percent,5546,139971.98,25.24
+6_lower_20_percent,940,8349.16,8.88
+7_lower_10_percent,470,2674.61,5.69
+8_lower_05_percent,376,1093.72,2.91
+9_lower_01_percent,94,68.14,0.72
