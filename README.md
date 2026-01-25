@@ -248,11 +248,11 @@ Which signup sources produce users who generate the most value in their first 18
 <br>
 
 **3.3 - Business Implications** <br>
-- Earlier 2024 signup cohorts generate more total revenue in their first 180 days than later cohorts, largely because later cohorts are smaller, so revenue trends should be monitored before scaling growth.
-- Employer partner and referral users generate higher 180-day revenue per user than other channels, making them more efficient sources of early customer value.
-- Paid acquisition users generate the lowest 180-day revenue, so spend on this channel should be carefully controlled unless early revenue improves.
-- Organic acquisition generates the highest total 180-day revenue overall, but this declines for later signup cohorts in line with the overall drop in cohort size.
-- Acquisition decisions should consider both total revenue and revenue per user, since channels differ in how much value each user generates early on.
+- Total 180-day revenue falls for later signup cohorts mainly because there are fewer users, so the business needs to understand and address the decline in cohort size before expecting revenue to grow.
+- Employer partner and referral channels generate more revenue per user within 180 days, so these channels should be treated as high-efficiency sources and protected from quality dilution.
+- Paid acquisition generates the lowest 180-day revenue, so spending on this channel should be limited unless early revenue improves.
+- Organic acquisition contributes the most total 180-day revenue but weakens for later cohorts, so relying on organic growth alone will not sustain revenue if cohort size continues to shrink.
+- Because some channels generate revenue through volume and others through higher value per user, the business must decide which model it wants to scale and manage acquisition channels differently instead of treating them the same.
 
 <br><br>
 
@@ -266,23 +266,19 @@ How much transaction volume flows through the product, how much revenue AscentPA
 </p>
 
 #### Method
-- Restrict transactions to **monetizable spend activity** (card payments, bill pay, FX payments)
-- Exclude top-ups and peer-to-peer transfers from GMV
-- Aggregate monthly **GMV** and **net revenue** for calendar year 2024
-- Compute take rate as `net revenue ÷ GMV`
+- Restrict transactions to monetizable spend types (card payments, bill pay, FX payments).
+- Exclude refunds from all calculations.
+- Exclude top-ups and peer-to-peer transfers from GMV.
+- Aggregate monthly GMV and net revenue.
+- Compute take rate as net revenue divided by GMV.
+- Filter the final report to calendar year 2024 in Tableau (not in the SQL).
 
 #### Key Insights
-- Net revenue grows steadily through the first half of the year, peaking mid-year before declining.
-- Take rate remains **remarkably stable (~1.18%–1.30%)** across months.
-- This indicates revenue changes are driven primarily by **transaction volume**, not pricing or fee expansion.
-- Monetization efficiency is consistent, but revenue is highly sensitive to usage momentum.
-- When activity slows, revenue falls proportionally, exposing limited pricing leverage.
+- Net revenue rises through July, then declines through year-end.
+- Take rate stays tightly stable (~1.18%–1.30%) month to month.
+- Changes in net revenue mostly follow changes in GMV, not changes in take rate.
+- When GMV falls later in the year, net revenue falls with it, with little offset from take rate.
 
-#### **Business Implications**
-- Stable take rate confirms pricing discipline but limits revenue upside without volume growth.
-- Revenue sensitivity to transaction volume increases exposure to engagement slowdowns.
-- Monetization efficiency is strong, but pricing leverage is limited.
-- Growth initiatives must prioritize increasing transaction frequency and volume.
 
 <br>
 
@@ -298,22 +294,28 @@ Which transaction channel contribute most to revenue, and how their contribution
 </p>
 
 #### Method
-- Segment monetizable transactions by type (bill pay, card payments, withdrawals)
-- Aggregate monthly net revenue by transaction channel
-- Compare relative contribution and trend consistency across channels
+- Group transactions by month and transaction type (tx_type).
+- Exclude refunds.
+- Exclude top-ups and P2P sends from the analysis.
+- Aggregate monthly GMV and net revenue for each transaction type.
+- Compute take rate as net revenue ÷ GMV per transaction type.
+- Restrict the analysis to calendar year 2024 (in SQL).
 
 #### Key Insights
-- **Bill pay and card payments** are the dominant revenue drivers throughout the year.
+- Bill pay and card payments drive most of the 2024 net revenue across months.
 - Withdrawals contribute meaningfully but remain a secondary revenue source.
-- Revenue composition is relatively stable, with no single channel showing explosive growth.
-- The lack of a breakout monetization channel limits upside without overall usage growth.
-- The platform relies on **balanced transaction mix**, not a high-margin feature.
+- The revenue mix across transaction types stays fairly stable over the year.
+- No single transaction type becomes a breakout driver of revenue growth.
+- Take rates are fairly similar across types, with card payments slightly higher than bill pay and withdrawals.
 
-#### **Business Implications**
-- Revenue is concentrated in bill pay and card payments, with no breakout monetization feature.
-- A balanced mix provides stability but limits asymmetric upside.
-- Lack of a high-margin channel constrains revenue expansion without usage growth.
-- New monetization features could materially improve revenue resilience.
+<br>
+
+**4.3 - Business Implications** <br>
+- Take rate stays stable month to month, and net revenue rises and falls mainly with GMV, so revenue growth depends more on increasing usage volume than on higher fees.
+- Bill pay and card payments drive most of the revenue, and withdrawals remain secondary, so improving the performance of bill pay and card payments will move total revenue more than pushing smaller transaction types.
+- The revenue mix by transaction type stays stable with no breakout type, so there is no single “new” transaction type currently lifting monetization on its own.
+- When overall activity slows, revenue drops with it and the mix does not change enough to offset the decline, so the business needs growth in total transactions (or GMV) to prevent revenue from falling.
+- With take rate not expanding and no transaction type suddenly accelerating, revenue improvement requires either more usage across the main transaction types or a deliberate change to pricing/fees (which is not happening in the current data).
 
 <br><br>
 
