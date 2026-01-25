@@ -363,10 +363,10 @@ How quickly does each acquisition channel generate enough revenue to repay its u
 <br>
 
 **5.3 - Business Implications** <br>
-- Referral is the only channel that recovers acquisition cost within 180 days and has the highest share of users repaying CAC.
-- Employer partnerships recover a meaningful portion of CAC but do not fully pay back within 180 days for most users.
-- Paid acquisition performs poorly on both LTV/CAC and CAC recovery probability, with very few users repaying acquisition cost within 180 days.
-- Channel efficiency differs not only in average LTV/CAC but also in how many users actually repay CAC, meaning averages alone can hide risk.
+- Referral is the only channel where, on average, users earn back their acquisition cost within 180 days, and it also has the most users who do so.
+- Employer partnership users earn back part of their acquisition cost, but most do not fully pay it back within 180 days.
+- Paid acquisition performs worst: only a small share of users earn back their acquisition cost within 180 days.
+- Looking only at average LTV can be misleading, because some channels earn back costs for many users while others do so for very few.
 
 
 <br><br>
