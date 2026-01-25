@@ -276,9 +276,6 @@ How much transaction volume flows through the product, how much revenue AscentPA
 #### Key Insights
 - Net revenue rises through July, then declines through year-end.
 - Take rate stays tightly stable (~1.18%–1.30%) month to month.
-- Changes in net revenue mostly follow changes in GMV, not changes in take rate.
-- When GMV falls later in the year, net revenue falls with it, with little offset from take rate.
-
 
 <br>
 
